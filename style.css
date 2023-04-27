@@ -25,7 +25,7 @@ section {
 	padding: 10%;
 }
 
-#youtube {
+section.youtube {
 	font-size: 3rem;
 	font-family: arial;
 	list-style-type: none;
