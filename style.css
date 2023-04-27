@@ -26,8 +26,8 @@ section {
 }
 
 #youtube {
-	font-size: 1em;
+	font-size: 3rem;
 	font-family: arial;
-	color: inherit;
-	display: block;
+	list-style-type: none;
+	padding: 0px;
 }
