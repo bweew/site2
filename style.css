@@ -1,0 +1,30 @@
+body {
+  background-color: #FFC947; 
+	color: black;
+}
+#bweew {
+	font-family: courier;
+	font-size: 6em;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+h2 {
+	font-size: 4em;
+}
+nav {
+	font-size: 3em;
+	text-align: center;
+}
+
+section {
+	font-size: 3em;
+	font-family: menlo;
+}
+
+#youtube {
+	font-size: 1em;
+	font-family: arial;
+	color: inherit;
+	display: block;
+}
