@@ -36,3 +36,7 @@ section.youtube {
 	list-style-type: none;
 	padding: 0px;
 }
+
+#link {
+ list-style: none;
+}
