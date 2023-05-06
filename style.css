@@ -17,19 +17,23 @@ img {
 float: right;
 padding-left: 30px;
 }
-}
+
 h2 {
-	font-size: 4em;
+	font-size: 2em;
+	margin-bottom: 20%;
 }
 nav {
 	font-size: 3em;
-	text-align: center;
+	display: inline;
+	white-space: nowrap;
+	margin-left: 20%;
 }
 
 section {
 	font-size: 3em;
 	font-family: menlo;
 	padding: 10%;
+	margin-bottom: 50%;
 }
 
 section.youtube {
