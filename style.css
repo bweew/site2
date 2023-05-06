@@ -46,3 +46,13 @@ section.youtube {
 #link {
  list-style: none;
 }
+p.foot{
+	text-align: center;
+	white-space: nowrap;
+	font-size: 50px;
+}
+p.column{
+	column-count: 2;
+	column-gap: 50px;
+	font-family: serif;
+}
