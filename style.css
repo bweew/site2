@@ -85,6 +85,9 @@ p.foot{
 p {
 	text-shadow: 5px 5px 30px red;
 }
+pre {
+		text-shadow: 5px 5px 30px red;
+}
 p.column{
 	column-count: 2;
 	column-gap: 50px;
