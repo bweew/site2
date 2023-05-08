@@ -35,6 +35,8 @@ section {
 	padding: 10%;
 	margin-bottom: 50%;
 	background-color: aqua;
+	border-style: groove;
+	background-color: blueviolet;
 }
 
 section.youtube {
