@@ -27,9 +27,11 @@ nav {
 	display: inline;
 	white-space: nowrap;
 	margin-left: 20%;
-	background-color: aqua;
+	background-color: orange;
 	border-style: groove;
-	background-color: blueviolet;
+		border-radius: 20px;
+		padding: 10px;
+		
 }
 
 section {
@@ -37,9 +39,10 @@ section {
 	font-family: menlo;
 	padding: 10%;
 	margin-bottom: 50%;
-	background-color: aqua;
+	background-image: linear-gradient(#FFC947, green);
 	border-style: groove;
-	background-color: blueviolet;
+			border-radius: 40px;
+			
 }
 
 section.youtube {
@@ -58,12 +61,13 @@ p.foot{
 	font-size: 50px;
 }
 p {
-	text-shadow: 5px 5px 5px black;
+	text-shadow: 5px 5px 30px black;
 }
 p.column{
 	column-count: 2;
 	column-gap: 50px;
 	font-family: serif;
+	text-shadow: 10px 10px 30px red;
 }
 .emo {
 	font-size: 300px;
