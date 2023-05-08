@@ -48,7 +48,8 @@ nav {
 	border-style: groove;
 		border-radius: 20px;
 		padding: 10px;
-		
+	margin: auto;
+	max-width: 800px;	
 }
 
 section {
