@@ -50,7 +50,7 @@ nav {
 		padding: 10px;
 	margin: auto;
 	max-width: 800px;	
-	translate: (0px, 50px);
+	transform: translate(0px, 50px);
 }
 
 section {
