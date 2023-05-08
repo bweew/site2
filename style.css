@@ -40,17 +40,17 @@ h5 {
 	text-shadow: 5px 5px 30px red;	
 }
 nav {
-	font-size: 3em;
+	font-size: 3rem;
 	display: inline;
 	white-space: nowrap;
 	margin-left: 20%;
-	background-color: orange;
-	border-style: groove;
+	background-color: #FFC947;
+	border-style: transparent;
 		border-radius: 20px;
 		padding: 10px;
 	margin: auto;
 	max-width: 800px;	
-	transform: translate(0px, 50px);
+
 }
 
 section {
