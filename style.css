@@ -51,6 +51,9 @@ p.foot{
 	white-space: nowrap;
 	font-size: 50px;
 }
+p {
+	text-shadow: 5px 5px 5px;
+}
 p.column{
 	column-count: 2;
 	column-gap: 50px;
