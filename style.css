@@ -61,6 +61,7 @@ section {
 			border-radius: 40px;
 			max-width: 800px;
 			flex-wrap: wrap;	
+			margin: auto;
 }
 
 #ul {
