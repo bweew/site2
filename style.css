@@ -12,6 +12,8 @@ body {
 	margin-top: 10%;
 	display: block;
 	text-shadow: 20px 20px 30px green;
+	
+ 
 }
 img {
 float: right;
@@ -21,6 +23,12 @@ padding-left: 30px;
 h2 {
 	font-size: 2em;
 	margin-bottom: 20%;
+}
+h3 {
+	text-shadow: 5px 5px 30px red;	
+}
+h5 {
+	text-shadow: 5px 5px 30px red;	
 }
 nav {
 	font-size: 3em;
@@ -45,6 +53,10 @@ section {
 			
 }
 
+#ul {
+		text-shadow: 5px 5px 30px red;
+}
+
 section.youtube {
 	font-size: 3rem;
 	font-family: arial;
@@ -61,7 +73,7 @@ p.foot{
 	font-size: 50px;
 }
 p {
-	text-shadow: 5px 5px 30px black;
+	text-shadow: 5px 5px 30px red;
 }
 p.column{
 	column-count: 2;
