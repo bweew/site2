@@ -1,7 +1,7 @@
 // mood-tracker.js
 
 // Define an array of moods to choose from
-const moods = ['happy','excited','nice','tired','wonderful','sleepy'];
+const moods = ['happy😃','excited😮','//nice💆‍♂️💅🏽👨🏾‍💻','tired🦉','wonderful!💃','sleepy😮‍💨','~anxiety~👯‍♀️'];
 
 // Wrap the code inside a window.onload event handler
 window.onload = function() {
