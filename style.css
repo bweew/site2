@@ -34,7 +34,7 @@ section {
 	font-family: menlo;
 	padding: 10%;
 	margin-bottom: 50%;
-	text-shadow: 5px 5px 5px black;
+	background-color: aqua;
 }
 
 section.youtube {
