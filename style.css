@@ -27,6 +27,9 @@ nav {
 	display: inline;
 	white-space: nowrap;
 	margin-left: 20%;
+	background-color: aqua;
+	border-style: groove;
+	background-color: blueviolet;
 }
 
 section {
