@@ -15,7 +15,7 @@ body {
 	
  
 }
-img {
+#takahe {
 float: right;
 padding-left: 0px
 margin-right: 100px;
@@ -107,4 +107,11 @@ p.column{
 hr {
 	border:solid grey 3px;
 	border-radius:10px;
+}
+div.ytimg {
+	padding: 20px;
+	border-radius: 50px;
+	margin-top: 100px;
+	background-color:black;
+	width:600px;
 }
