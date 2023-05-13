@@ -8,7 +8,7 @@ body {
 	font-size: 7rem;
 	text-align: center;
 	text-decoration: none;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	margin-top: 10%;
 	display: block;
 	text-shadow: 20px 20px 30px green;
@@ -16,6 +16,12 @@ body {
 
 h2 {
 	font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+h2 {
+	font-size: 4rem;
+}
 }
 
 h3 {
@@ -37,6 +43,12 @@ nav {
 		padding: 10px;
 	margin: auto;
 	max-width: 800px;	
+}
+
+@media {
+nav {
+	font-size: 2rem;
+}
 }
 
 section {
@@ -65,14 +77,19 @@ p.foot{
 	font-size: 1rem;
 }
 
+@media (max-width: 500px){
+p.foot {font-size: 2rem;
+}
+}
+
 p {
 	text-shadow: 5px 5px 30px red;
 	font-size: 1rem;
 }
 
-pre {
-		text-shadow: 5px 5px 30px red;
-		text-size:1rem;
+@media (max-width:500px) {
+p {font-size:2rem;
+}
 }
 
 p.column{
@@ -83,9 +100,21 @@ p.column{
 	text-shadow: 10px 10px 30px red;
 }
 
+@media (max-width: 500px) {
+p.column {
+	font-size: 2rem;
+}
+}
+
 .emo {
 	font-size: 4rem;
 	text-decoration: none;
+}
+
+@media (max-width: 500px) {
+.emo {
+	font-size: 8rem;
+}
 }
 
 .space {
