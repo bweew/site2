@@ -101,6 +101,16 @@ section {
 	font-size: 4rem;
 }
 	}
+	
+	@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.li{
+	font-size: 4rem;
+	list-style:disc ;
+}
+}
 
 p.foot{
 	text-align: center;
@@ -147,6 +157,7 @@ p.column{
   and (-webkit-min-device-pixel-ratio: 2) {
 p.column {
 	font-size: 4rem;
+	column-gap: 15%;
 }
 	}
 
