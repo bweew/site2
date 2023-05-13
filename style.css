@@ -18,18 +18,27 @@ h2 {
 	font-size: 2rem;
 }
 
-@media (max-width: 500px) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 h2 {
-	font-size: 4rem;
+	font-size: 5rem;
 }
 }
+
 
 h3 {
 	text-shadow: 5px 5px 30px red;	
 }
 
-h5 {
-	text-shadow: 5px 5px 30px red;	
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+h3 {
+	font-size: 5rem;
+}
 }
 
 nav {
@@ -45,11 +54,14 @@ nav {
 	max-width: 800px;	
 }
 
-@media {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 nav {
-	font-size: 2rem;
+	font-size: 3rem;
 }
-}
+	}
 
 section {
 	font-family: menlo;
@@ -66,10 +78,29 @@ section {
 			flex-wrap: wrap;	
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+section {
+	margin: 1%;
 
-#link {
+}
+}
+
+
+.link {
  list-style: none;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.link{
+	font-size: 4rem;
+}
+	}
 
 p.foot{
 	text-align: center;
@@ -77,20 +108,30 @@ p.foot{
 	font-size: 1rem;
 }
 
-@media (max-width: 500px){
-p.foot {font-size: 2rem;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+p.foot {
+	font-size: 4rem;
 }
-}
+	}
 
 p {
 	text-shadow: 5px 5px 30px red;
 	font-size: 1rem;
 }
 
-@media (max-width:500px) {
-p {font-size:2rem;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+p {
+	font-size: 4rem;
 }
-}
+	}
+
+
 
 p.column{
 	column-count: 2;
@@ -100,11 +141,14 @@ p.column{
 	text-shadow: 10px 10px 30px red;
 }
 
-@media (max-width: 500px) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 p.column {
-	font-size: 2rem;
+	font-size: 4rem;
 }
-}
+	}
 
 .emo {
 	font-size: 4rem;
@@ -121,19 +165,24 @@ p.column {
 	padding-bottom: 500%;
 }
 
-hr {
-	border:solid grey 3px;
-	border-radius:10px;
-}
-
 div.ytimg {
 	padding: 10%;
 	border-radius: 50px;
 	margin-top: 20px;
 	background-color:black;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+div.ytimg {
+width: 100%;
+}
+	}
+
 .ytimg{
-	width: 80%;
+	width: 100%;
 }
 
 div.vim {
@@ -141,6 +190,31 @@ div.vim {
 	overflow-y: auto;
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+div.vim {
+	max-height: 1000px;
+}
+	}
+
 .img {
 	width: 80%
 }
+
+.takahue {
+	float: right;
+	width:100%;
+	shape-outside: url("https://i.imgur.com/EMHLO27.png")
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+#ul {
+	font-size: 4rem;
+}
+}
+
