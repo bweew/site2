@@ -116,6 +116,6 @@ div.ytimg {
 	width:540px;
 }
 div.vim {
-	max-height: 500px;
+	max-height: 100px;
 	overflow-y: auto;
 }
