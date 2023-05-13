@@ -115,3 +115,7 @@ div.ytimg {
 	background-color:black;
 	width:540px;
 }
+div.vim {
+	max-height: 500px;
+	overflow-y: auto;
+}
