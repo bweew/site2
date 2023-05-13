@@ -155,11 +155,15 @@ p.column {
 	text-decoration: none;
 }
 
-@media (max-width: 500px) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 .emo {
-	font-size: 8rem;
+	font-size: 15rem;
 }
 }
+
 
 .space {
 	padding-bottom: 500%;
@@ -218,3 +222,6 @@ div.vim {
 }
 }
 
+#mood {
+	font-size: 4em;
+}
