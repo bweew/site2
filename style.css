@@ -5,42 +5,44 @@ body {
 #bweew {
 	font-family: cursive;
 	letter-spacing: 60px;
-	font-size: 10em;
+	font-size: 7rem;
 	text-align: center;
 	text-decoration: none;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	margin-top: 10%;
 	display: block;
 	text-shadow: 20px 20px 30px green;
-	
- 
-}
-#takahe {
-float: right;
-padding-left: 0px
-margin-right: 100px;
-margin-top: 100px;
-transform: scale(1);
-shape-outside: url(https://i.imgur.com/EMHLO27.png);
-display: flow-root;
-shape-margin:1rem;
-margin-right:20px;
-translate: (-3rem, -3rem);
-flex-grow: 1;
 }
 
 h2 {
-	font-size: 2em;
-	margin-bottom: 20%;
+	font-size: 2rem;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+h2 {
+	font-size: 5rem;
+}
+}
+
+
 h3 {
 	text-shadow: 5px 5px 30px red;	
 }
-h5 {
-	text-shadow: 5px 5px 30px red;	
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+h3 {
+	font-size: 5rem;
 }
+}
+
 nav {
-	font-size: 4rem;
+	font-size: 1rem;
 	display: inline;
 	white-space: nowrap;
 	margin-left: 20%;
@@ -50,68 +52,187 @@ nav {
 		padding: 10px;
 	margin: auto;
 	max-width: 800px;	
-
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+nav {
+	font-size: 3rem;
+}
+	}
+
 section {
-	font-size: 3em;
 	font-family: menlo;
-	padding: 10%;
+	text-decoration: none;
+	padding-top: 10%;
+	padding-left:20%;
+	padding-right:20%;
+	padding-bottom: 10%;
 	margin-bottom: 50%;
+	margin: 10%;
 	background-image: linear-gradient(#FFC947, aqua);
-	border-style: groove;
 			border-radius: 40px;
 			max-width: 800px;
 			flex-wrap: wrap;	
-			margin: auto;
 }
 
-#ul {
-		text-shadow: 5px 5px 30px red;
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+section {
+	margin: 1%;
+
+}
 }
 
-section.youtube {
-	font-size: 3rem;
-	font-family: arial;
-	list-style-type: none;
-	padding: 0px;
-}
 
-#link {
+.link {
  list-style: none;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.link{
+	font-size: 4rem;
+}
+	}
+	
+	@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.li{
+	font-size: 4rem;
+	list-style:disc ;
+}
+}
+
 p.foot{
 	text-align: center;
 	white-space: nowrap;
-	font-size: 50px;
+	font-size: 1rem;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+p.foot {
+	font-size: 4rem;
+}
+	}
+
 p {
 	text-shadow: 5px 5px 30px red;
+	font-size: 1rem;
 }
-pre {
-		text-shadow: 5px 5px 30px red;
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+p {
+	font-size: 4rem;
 }
+	}
+
+
+
 p.column{
 	column-count: 2;
 	column-gap: 50px;
 	font-family: serif;
+	font-size: 1rem;
 	text-shadow: 10px 10px 30px red;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+p.column {
+	font-size: 4rem;
+	column-gap: 15%;
+}
+	}
+
 .emo {
-	font-size: 300px;
+	font-size: 4rem;
 	text-decoration: none;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+.emo {
+	font-size: 15rem;
+}
+}
+
+
 .space {
-	padding-bottom: 10000px;
+	padding-bottom: 500%;
 }
-hr {
-	border:solid grey 3px;
-	border-radius:10px;
-}
+
 div.ytimg {
-	padding: 20px;
+	padding: 10%;
 	border-radius: 50px;
 	margin-top: 20px;
 	background-color:black;
-	width:540px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+div.ytimg {
+width: 100%;
+}
+	}
+
+.ytimg{
+	width: 100%;
+}
+
+div.vim {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+div.vim {
+	max-height: 1000px;
+}
+	}
+
+.img {
+	width: 80%
+}
+
+.takahue {
+	float: right;
+	width:100%;
+	shape-outside: url("https://i.imgur.com/EMHLO27.png")
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+#ul {
+	font-size: 4rem;
+}
+}
+
+#mood {
+	font-size: 4em;
 }
