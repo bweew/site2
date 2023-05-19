@@ -237,3 +237,7 @@ div.vim {
 #mood {
 	font-size: 4em;
 }
+
+.hide {
+    display:none;
+} 
