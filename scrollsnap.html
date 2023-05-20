@@ -5,22 +5,22 @@
 <style>
 
 	html {
-		scroll-snap-type: y proximity;
-		*/ scroll-padding-top: 30px; */
+		scroll-snap-type: y mandatory;
+		 scroll-padding-top: 30px; 
 		}
 
 	body {
 		background-color: grey;
 		color: white;
-		font-size: 2rem;
+		font-size: 4rem;
 		text-align: center;
 		
 		}
 
-
-	nav {
-		 display: none; 
-		 }
+		h2 {
+			color: orange;
+		}
+		
 
 	section {
 		height: 100vh;
@@ -35,45 +35,93 @@
 
 	<meta name=“viewport”
 	content=“width=device-width, initial-scale=1.0” />
-	<link rel=“stylesheet” href=“style3.css” />
 </head>
 <body>
-	<nav>bweew</nav>
+
 
 	<div>
 
 	<section>
-		<h2 style=“color:orange;”>page 1</h2>
-		<p>
-		lore ipsum possum awesome blah blah etc..
+		<h2>How to paginate a single page</h2>
+		<p>using this css trick you can make it seem like you're scrolling through multiple pages when its actually just  a single page. To get this effect heres what you do...
 		</p>
+<ol>
+	<li>
+		style the html tag with
+		scroll-snap-type: y mandatory.	
+	</li>
+	<li>
+make a div with sections inside for each page.
+	</li>
+	<li>
+style the section with "height: 100vh; scroll-snap-align:start; scroll-snap-stop:normal;"
+	</li>
+</ol>		
+
+
+
 	</section>
 
 	<section>
 	<h2 style=“color:blue;”>page 2</h2>
 	<p>
-	lore ipsum possum awesome blah blah etc..
+	lorem ipsum possum awesome blah blah etc..
 	</p>
 	</section>
 
 <section>
 <h2>page 3</h2>
 <p>
-lore ipsum possum awesome blah blah etc..
+lorem ipsum possum awesome blah blah etc..
 </p>
 </section>
 
 <section>
 <h2>page 4</h2>
 <p>
-lore ipsum possum awesome blah blah etc..
+lorem ipsum possum awesome blah blah etc..
 </p>
 </section>
 
 <section>
 <h2>page 5</h2>
 <p>
+lorem ipsum possum awesome blah blah etc..
+</p>
+</section>
+
+<section>
+<h2>page 6</h2>
+<p>
+lorem ipsum possum awesome blah blah etc..
+</p>
+</section>
+
+<section>
+<h2>page 7</h2>
+<p>
+lorem ipsum possum awesome blah blah etc..
+</p>
+</section>
+
+<section>
+<h2>page 8</h2>
+<p>
+lorem ipsum possum awesome blah blah etc..
+</p>
+</section>
+
+<section>
+<h2>page 9</h2>
+<p>
 lore ipsum possum awesome blah blah etc..
+</p>
+</section>
+
+<section>
+<h2>page 10</h2>
+<p>
+lorem ipsum possum awesome blah blah etc..
 </p>
 </section>
 
