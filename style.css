@@ -241,3 +241,7 @@ div.vim {
 .hide {
     display:none;
 } 
+
+q {
+	font-size: 2rem;
+}
