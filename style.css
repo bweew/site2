@@ -222,6 +222,7 @@ div.vim {
 .takahue {
 	float: right;
 	width:100%;
+	max-width 70%;
 	shape-outside: url("https://i.imgur.com/EMHLO27.png")
 }
 
