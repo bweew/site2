@@ -98,7 +98,7 @@ section {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 .link{
-	font-size: 4rem;
+	font-size: 2rem;
 }
 	}
 	
@@ -123,13 +123,13 @@ p.foot{
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 p.foot {
-	font-size: 4rem;
+	font-size: 2rem;
 }
 	}
 
 p {
 	text-shadow: 5px 5px 30px red;
-	font-size: 1rem;
+	font-size: 2rem;
 }
 
 /*
@@ -231,7 +231,7 @@ div.vim {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 #ul {
-	font-size: 4rem;
+	font-size: 2rem;
 }
 }
 
