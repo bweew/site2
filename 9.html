@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8" />
+	<title>lessons</title>
+</head>
+<body>
+
+
+	<style>
+	
+body {
+	background-color:	blue;
+	color: red;
+	font-family: sans-serif;
+font-size:1rem;
+padding-left: 2%;
+padding-right: 2%;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+a {color: red;}
+
+	
+	p {
+	padding-left:20px;
+	padding-right: 20px;
+}
+
+section {
+	background-color: black;
+	width: 100%;
+	border-radius: 20px;
+}
+	</style>
+	
+	  
+	<section style="max-height:100px; overflow-y:auto;">
+		
+	<h1>Table of Contents</h1>
+		<ul id="toc"></ul>
+		
+	</section>
+	
+<div style="max-height:300px; overflow-y:auto">
+	
+	
+
+	
+<section>
+
+
+ <h2 id="section1">Section 1</h2>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloribus id aliquid dolorem voluptatibus doloremque fuga accusantium ut dolorum exercitationem. Eius, repellat, a voluptatem dolorem voluptas sint laudantium quis enim?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, magnam, vitae rem adipisci perspiciatis nesciunt fugiat eligendi nemo! Ipsa, fugiat mollitia voluptate libero culpa id iusto facere at quo est.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, officia, sint eveniet eaque corrupti laudantium iusto ad ea provident quasi voluptatibus distinctio veniam a doloribus nobis culpa impedit. Atque, voluptate!</p>
+
+	
+</section>		
+
+<section>
+
+ <h2 id="section2">Section 2</h2>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio optio soluta explicabo asperiores deserunt. Harum, et laudantium delectus pariatur molestias quis debitis hic perspiciatis ipsa repellendus. Blanditiis consectetur asperiores dolorum? </p>		
+	
+</section>	
+ 
+
+
+
+<section>
+  <h2 id="section3">Section 3</h2>
+  <p>This is the content of section 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nihil, vero, itaque voluptas fugit temporibus quos iusto quis totam amet ipsam unde alias sit quo dolores deserunt quia est earum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, error excepturi ea et inventore beatae a quis. Quisquam, distinctio, sunt, rem in enim qui molestias laudantium eius mollitia odit eum!
+	
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, voluptates ipsam aperiam excepturi quaerat possimus officia officiis beatae laudantium eligendi sint atque reprehenderit dolores tempora deserunt nostrum perspiciatis illum maiores.</p>
+	
+	
+</section> 
+ 
+	<section>
+		
+	<h2 id="lessons">lessons</h2>	
+		
+<nav>
+<ul>
+	<li><a href="./lessons/block-chords.html">block chords</a></li>
+</ul>
+</nav>
+
+
+	</section>
+
+	<section>
+		
+
+	<h2 id="barry harris">barry harris
+	</h2>
+	<p>
+		alternating between 6 chord and diminished chord you can harmonize the major (bebop) and natural minor scales
+	</p>
+
+	
+	</section>
+
+</div>	
+
+	<button style="font-size:1rem;" id="back"
+		p>back</button>
+		
+		<script>
+  document.getElementById("back").addEventListener("click", function() {
+    window.location.href = "index.html";
+  });
+</script>
+
+
+
+	  <script>
+    // Get all the heading elements
+    var headings = document.querySelectorAll('h2');
+
+    // Create a new list item for each heading and add it to the table of contents
+    headings.forEach(function (heading) {
+      var listItem = document.createElement('li');
+      var link = document.createElement('a');
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent;
+      listItem.appendChild(link);
+      document.getElementById('toc').appendChild(listItem);
+    });
+  </script>
+	
+	
+</body>
+</html>
