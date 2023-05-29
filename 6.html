@@ -89,5 +89,20 @@
 			</ul>
 					
 	</section>
+	
+				<!--keyboard navigation -->
+			
+			  <script>
+    document.addEventListener('keypress', function(event) {
+      var key = event.key;
+      var keyNumber = parseInt(key);
+
+      if (keyNumber >= 1 && keyNumber <= 9) {
+        var pageURL = keyNumber + '.html';
+        window.location.href = pageURL;
+      }
+    });
+  </script>
+	
 </body>
 </html>
