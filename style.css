@@ -146,8 +146,8 @@ p {
 
 p.column{
 	column-count: 2;
-	column-gap: 50px;
-	font-family: serif;
+	column-gap: 10%;
+	font-family: baskerville;
 	font-size: 1rem;
 	text-shadow: 10px 10px 30px red;
 }
