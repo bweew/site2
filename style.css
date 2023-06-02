@@ -250,3 +250,8 @@ q {
 li {
 	font-size: 1rem;
 }
+
+blockquote {
+	font-size: 4rem;
+	font-family: baskerville;
+}
