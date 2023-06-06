@@ -157,7 +157,7 @@ p.column{
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 p.column {
-	font-size: 4rem;
+	font-size: 2rem;
 	column-gap: 15%;
 }
 	}
