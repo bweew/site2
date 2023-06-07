@@ -18,3 +18,13 @@ body {
 #artist {
 	text-align: center;
 }
+
+a:visited{
+	color: blue;
+}
+a:link{
+	color: green;
+}
+h1 {
+	text-align: center;
+}
