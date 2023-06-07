@@ -256,3 +256,8 @@ blockquote {
 	font-family: baskerville;
 }
 a:link{text-decoration: none;}
+
+.flex {
+	display: flex;
+	flex-wrap:wrap;
+}
