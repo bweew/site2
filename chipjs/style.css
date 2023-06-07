@@ -20,7 +20,7 @@ body {
 }
 
 a:visited{
-	color: blue;
+	color: grey;
 }
 a:link{
 	color: green;
