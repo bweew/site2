@@ -262,3 +262,7 @@ a:link{text-decoration: none;}
 	flex-wrap:wrap;
 	justify-content: center;
 }
+
+.butts {
+	flex:0 24%;
+}
