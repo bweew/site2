@@ -1,0 +1,20 @@
+body {
+	font-family: sans-serif ;
+	background: #110000 ;
+	color: #ccc ;
+}
+
+.song {
+	display: block;
+}
+#content {
+	display: block
+}
+
+#title {
+	text-align: center;
+}
+
+#artist {
+	text-align: center;
+}
