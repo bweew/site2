@@ -4,19 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>midi</title>
 </head>
 <body>
     
     <style>
         body {
-            background-color: green
-            ;
+            background-color: green;
+						font-family: sans-serif;
         }
+				
+				.container::-webkit-scrollbar{
+    display: none;
+  }
+	
+				
+				.container {
+					display:none;
+					flex-direction:column;
+					flex-wrap:wrap;
+					align-items:flex-start;
+					height: 200px;
+					justify-content:space-between;
+					width: 300px;
+					overflow-y: auto;
+				}
+				.child {
+				width :250px;
+				background-color:
+				#666;
+				border-radius: 10px;
+				padding: 20px;}
+			.child+.child	{	margin: 20px;
+				}
     </style>
     
+		<div class="container">
+			
+		<h2 class="child">
+			what got me back into midi files in the first place?
+		</h2>
+				<p class="child">
+			It used to be so easy to put midi files on a page back in the day. unfortunatly its been deprecated in modern browsers and html5. there was some javascript work around but i didnt know anything about javascript and that was a blocker. fortunately i've finally figured it out! 		
+		</p>
+		
+		<p class="child">
+what got me into midi file again? spite and stubbornness. I refuse to be extorted to pay for Icloud. iphones are so powerful yet by design made to fill up 16gb. 16gb is a lot we got to the moon on a few mbs. knowing that people made jungle on commodore amigas and ataris in 93 using protracker kept me going. knowing it was possible but not seeing it directly being done. curiosity and connecting the dots. I needed to unravel the string to see where it lead.		</p>
+
+<p class="child">demo scene. mod files file size limitations overcoming and pushing the boundaries of whats possible. reading manuals knowing that not everybody has the ability sit and focus people with adhd having hard times. it motivates me knowing that not everybody is able so i feel like i am letting something go to waste by not exploring it. knowing its a great priveledge to have a safe environment and have the time to learn. it inspires me because not everybody has that opportunity so i want to make the most of it.</p>
+
+<p class="child">
+	midi files and soundfonts. specifically the nokia soundfont a really dry sound. GM standardization. its a point of reference, a pallate. i can think in those sounds i can cook without being infront of a computer.
+	make a beat using a bluetooth keyboard on my phone.
+</p>
+
+<p class="child">
+	its was really important for me to find a solution to replace my laptop. bought a used iphone because the laptop was holding me hostage.
+	2000$ for a laptop my rent was to keep my laptop safe. I worked a lot of bullshit jobs to keep it safe so i could continue. it was a move towards freedom. the setback i had was fl wouldnt run on mac and i had to learn reason. and i was locked into to their system buying their plugins and limited by their features. pushed me to look for alternatives to never let that happen again. learning to code to see whats inside the black box.
+</p>
+
+<p class="child">
+	I tried to use an android phone with fl studio mobile but the audio latency sucked. fl mobile in general was wack with the file system. thats what got me into tracker sequencers. vivid tracker was great but it was hard to to load samples in. I had to learn how to use protracker first to make mod files to transfer my samples over. learned a lot about mastering for 8 bit chip sounds.
+</p>
+
+<p class="child">
+	it was kind of a trauma response learning milkytracker, sunvox, deflemask, vividtracker, schismtracker, fasttracker, radtracker, lmms. I want to make sure there is always a n alternative to never let a monopoly happen again. to never feeel locked in like i need to work every day to protect my laptop. I wanted to be able to replace my 2000$ computer wiht a 10$ linux board and it worked mostly.
+</p>
+
+			
+		</div>
+		
     <h2>Fresh Midi files</h2>
     
+		
     <midi-player
 		loop
       src="drum2.mid"
