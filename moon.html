@@ -221,7 +221,9 @@ using the
 <body>
   <div class="container2">
     <h1>moon journal</h1>
-		    
+		    <p>
+					write how you feel today and the phase of the moon. 
+		    </p>
     <form>
       <label for="datepicker">Select a Date:</label>
       <input type="date" id="datepicker" onchange="displayData(this.value);" required>
@@ -236,8 +238,17 @@ using the
     <h2>Data on Selected Date:</h2>
     <ul id="list"></ul>
     
-		<div style="height: 1000px" class="gap"></div>
-    <button style="margin-bottom:10px;"type="button" onclick="resetData();">reset local storage</button>
+<blockquote>
+ see if there are any interesting correlations. 
+ 	The data is stored locally in your browser.
+</blockquote>
+
+	<div class="top-pad"></div>
+
+    <button style="margin-bottom:10px;"type="button" onclick="resetData();">clear local storage</button>
+		
+			<div class="top-pad"></div>
+		
   </div>
   
   <script>
