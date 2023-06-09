@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>phases of the moon</title>
+  <style>
+    .moon {
+      width: 200px;
+      height: 200px;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+		
+		body {
+			background-color: black;
+			font-family: sans-serif;
+			color: grey;
+		}
+    
+    .moon::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 200px;
+      background-color: #000;
+      border-radius: 50%;
+      top: 0;
+      left: -50px;
+      transform-origin: 100px 100px;
+      transform: rotate(45deg);
+    }
+		
+		.top-pad {
+			height:5rem ;
+		}
+		
+	.container {
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+	}	
+	
+	p {
+	margin:0 10% 0 10%;
+	}
+		
+  </style>
+</head>
+<body>
+		<div class="container">
+	<div class="top-pad"></div>
+		  <div class="moon"></div>
+			<h2>Moon phase </h2>
+		<p>
+			
+In this example, we use the Sunrise-Sunset API to fetch the moon phase data by providing the latitude and longitude coordinates (in this case, for a location in Spain). The API response is processed in JSON format, and the moon phase is extracted from the response. Then, the `updateMoonPhase` function is called to update the moon phase display based on the received data.
+
+Please note that you'll need to replace the latitude and longitude values in the API URL with the desired location coordinates to get accurate moon phase information for that location.
+		</p>
+			
+	</div>
+	
+	
+  <script>
+    // Fetch moon phase data from the API
+    fetch('https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today')
+      .then(response => response.json())
+      .then(data => {
+        const moonPhase = data.moon_phase;
+        updateMoonPhase(moonPhase);
+      })
+      .catch(error => console.error(error));
+
+    // Update the moon phase based on the received data
+    function updateMoonPhase(phase) {
+      const moonElement = document.querySelector('.moon');
+
+      if (phase === 'New Moon') {
+        moonElement.style.visibility = 'hidden';
+      } else if (phase === 'First Quarter' || phase === 'Last Quarter') {
+        moonElement.style.visibility = 'visible';
+        moonElement.style.transform = 'rotate(0deg)';
+      } else {
+        moonElement.style.visibility = 'visible';
+        moonElement.style.transform = 'rotate(45deg)';
+      }
+    }
+  </script>
+</body>
+</html>
