@@ -69,11 +69,184 @@ using the
 <a href="https://sunrise-sunset.org">Sunrise-Sunset API</a>
  to fetch the moon phase data by providing the latitude and longitude coordinates (in this case, for a location in Toronto). The API response is processed in JSON format, and the moon phase is extracted from the response. Then, the `updateMoonPhase` function is called to update the moon phase display based on the received data.
 		</p>
+	
+	<div class="top-pad"></div>
 		
 		<a href="index.html">back</a>
-			
+	
+	<div class="top-pad"></div>
+		
 	</div>
 	
+  <style>   
+	body {
+		background-color: black;
+	}
+	
+	
+        .container2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     background-color: grey;
+      color: beige;
+      font-family: sans-serif;			
+			border-radius:30px;
+    }
+    
+    h1, h2 {
+      text-align: center;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    form label {
+      margin-bottom: 10px;
+    }
+    
+    form input[type="date"],
+    form input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 200px;
+      border: 1px solid beige;
+      border-radius: 4px;
+			background: transparent;
+    }
+    
+    form button {
+      padding: 10px 20px;
+      background-color: #666;
+      color: #fff;
+      border: beige 1px solid;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    form button[type="submit"] {
+      background-color: grey;
+    }
+    
+    form button[type="button"],
+    form button[type="reset"] {
+      background-color: grey;
+    }
+    
+    #list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    #list li {
+      margin-bottom: 5px;
+    }
+  </style>
+  <script>
+    function saveData() {
+      var selectedDate = document.getElementById("datepicker").value;
+      var inputValue = document.getElementById("textbox").value;
+      
+      if (localStorage.getItem(selectedDate)) {
+        // Date already exists, add the new value to the existing array
+        var existingData = JSON.parse(localStorage.getItem(selectedDate));
+        existingData.push(inputValue);
+        localStorage.setItem(selectedDate, JSON.stringify(existingData));
+      } else {
+        // Date doesn't exist, create a new array with the value
+        var newData = [inputValue];
+        localStorage.setItem(selectedDate, JSON.stringify(newData));
+      }
+      
+      // Clear the input value
+      document.getElementById("textbox").value = "";
+      
+      // Display a success message
+      alert("Data saved successfully!");
+      
+      // Refresh the list
+      displayData(selectedDate);
+    }
+    
+    function clearDate() {
+      var selectedDate = document.getElementById("datepicker").value;
+      
+      // Clear data for the selected date from local storage
+      localStorage.removeItem(selectedDate);
+      
+      // Clear the list
+      document.getElementById("list").innerHTML = "";
+    }
+    
+    function resetData() {
+      // Clear all data from local storage
+      localStorage.clear();
+      
+      // Clear the list
+      document.getElementById("list").innerHTML = "";
+      
+      // Display a success message
+      alert("Local storage cleared!");
+    }
+    
+    function displayData(selectedDate) {
+      var data = localStorage.getItem(selectedDate);
+      var list = document.getElementById("list");
+      
+      if (data) {
+        var items = JSON.parse(data);
+        
+        // Clear the list before adding new items
+        list.innerHTML = "";
+        
+        // Add items to the list
+        for (var i = 0; i < items.length; i++) {
+          var listItem = document.createElement("li");
+          listItem.textContent = items[i];
+          list.appendChild(listItem);
+        }
+      } else {
+        // Clear the list if no data exists for the selected date
+        list.innerHTML = "";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container2">
+    <h1>moon journal</h1>
+		    
+    <form>
+      <label for="datepicker">Select a Date:</label>
+      <input type="date" id="datepicker" onchange="displayData(this.value);" required>
+      
+      <label for="textbox">Enter Data:</label>
+      <input type="text" id="textbox" required>
+      
+      <button type="button" onclick="saveData();">Save Data</button>
+      <button type="button" onclick="clearDate();">Clear Date</button>
+    </form>
+    
+    <h2>Data on Selected Date:</h2>
+    <ul id="list"></ul>
+    
+		<div style="height: 1000px" class="gap"></div>
+    <button style="margin-bottom:10px;"type="button" onclick="resetData();">reset local storage</button>
+  </div>
+  
+  <script>
+    // Automatically display the data for the current date on page load
+    var today = new Date().toISOString().split('T')[0];
+    displayData(today);
+  </script>
+	
+
 	
   <script>
     // Fetch moon phase data from the API
