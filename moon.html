@@ -47,6 +47,12 @@
 	margin:0 10% 0 10%;
 	}
 		
+a:link {
+	color: grey;
+}
+a:visited {
+	color: green;
+}
   </style>
 </head>
 <body>
@@ -56,9 +62,9 @@
 			<h2>Moon phase </h2>
 		<p>
 			
-In this example, we use the Sunrise-Sunset API to fetch the moon phase data by providing the latitude and longitude coordinates (in this case, for a location in Spain). The API response is processed in JSON format, and the moon phase is extracted from the response. Then, the `updateMoonPhase` function is called to update the moon phase display based on the received data.
-
-Please note that you'll need to replace the latitude and longitude values in the API URL with the desired location coordinates to get accurate moon phase information for that location.
+In this example, we use the 
+<a href="https://sunrise-sunset.org">Sunrise-Sunset API</a>
+ to fetch the moon phase data by providing the latitude and longitude coordinates (in this case, for a location in Toronto). The API response is processed in JSON format, and the moon phase is extracted from the response. Then, the `updateMoonPhase` function is called to update the moon phase display based on the received data.
 		</p>
 			
 	</div>
@@ -66,7 +72,7 @@ Please note that you'll need to replace the latitude and longitude values in the
 	
   <script>
     // Fetch moon phase data from the API
-    fetch('https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today')
+    fetch('https://api.sunrise-sunset.org/json?lat=43.651070&lng=-79.347015&date=today')
       .then(response => response.json())
       .then(data => {
         const moonPhase = data.moon_phase;
