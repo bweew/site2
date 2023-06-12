@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/choda-chado" rel="stylesheet">
+  <title>Document</title>
+</head>
+  <style>
+  .container {  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  grid-template-rows: 0.5fr 2.1fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". head ."
+    "Left mid right"
+    ". foot .";
+}
+
+.head { grid-area: head; }
+
+.mid { grid-area: mid; }
+
+.foot { grid-area: foot; }
+
+.Left {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". nav-title nav-title"
+    ". nav-items nav-items"
+    ". nav-items nav-items"
+    ". nav-items nav-items"
+    ". nav-items nav-items"
+    ". nav-items nav-items"
+    ". nav-items nav-items"
+    ". nav-items nav-items";
+  grid-area: Left;
+}
+
+.nav-items { grid-area: nav-items; }
+
+.nav-title { grid-area: nav-title; }
+
+.right { grid-area: right; }
+  </style>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/choda-chado');
+    body {
+      font: 1rem sans-serif;
+      background-color: grey;
+    }
+    h1 {
+      font-family: choda chado;
+      font-size: 7rem;
+position:relative;
+      top:90px;
+      left:0px;
+      transition:top 5s;
+      transition-timing-function:ease;
+      }
+    h1:hover {
+      top: -300px;
+    }
+    
+    ul {
+      position:fixed;   
+      height: 100%;
+    }
+     li {
+      list-style: none;
+       position:relative;
+       top:-150px;
+       right:50px;
+    }
+    
+    li a {
+      display:block;
+      color: #000;
+      padding: 8px 16px;
+      width 20px;
+    }
+    li a:hover {
+  background-color: #555;
+      border-radius:10px ;
+  color: white;
+}
+    .mid {
+background-color: #545454;
+      border-radius: 10px;
+      padding: 30px;
+    }
+    .right {
+      background-color: #292929;
+      border-radius: 10px;
+      display:flex;
+      flex-direction:row;
+      max-height:0px;
+      flex-wrap:wrap;  
+      }
+    .right >* {
+      width:90%;
+      height:auto;
+      position:relative;
+      bottom:300px;
+      right:50px;
+      transition:transform 2s;
+    }
+     .right:hover>* {
+        transform:rotate(-20deg);
+       transform: scale(1.5, 1.5);
+      }
+    article:nth-child(even) {
+      column-count:2;
+      
+      
+    }
+    article:nth-child(odd){
+    border-top: 3px solid black;
+      border-bottom: 3px solid black;
+    }
+    article:first-child{
+     border-top:none;
+    }
+    article:last-child{
+      border-bottom:none;
+    }
+    h2 {
+      column-span: all;
+    } 
+    .dropdown-content {
+  display: none;
+  position: absolute;
+      top:70px;
+      left:-100px;
+  background-color: transparent;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;    
+  </style>
+<body>
+  <div class="container">
+  <div class="head">
+    <h1>Bweew</h1>
+  </div>
+  <div class="mid">
+    <section>
+      <article>
+        <h2>Article 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+      <article><h2>Article 4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 5</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 6</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 7</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+            <article>
+              <h2>Article 8</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+      <article><h2>Article 9</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+      <article><h2>Article 10</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+      </article>
+    </section>
+  </div>
+  <div class="Left">
+    <div class="nav-title">
+      <h2 style="position: -webkit-sticky;
+  position: sticky;
+  top: 50px;">Nav Links</h2>
+    </div>
+    <div class="nav-items">
+      <ul>
+      <li><a href="https://bweew.github.io/site/">
+        zesty sauce blog
+      </a></li>
+      <li><a href="https://woolyss.com/chipmusic-chiptrackers.php">Woolyss Chiptracker</a></li>
+      <li><a href="https://bweew.github.io/site2/">bweew</a></li>
+      <li><a href="https://milkytracker.org">MilkyTracker</a></li>
+      <li><a href="https://www.warmplace.ru/soft/sunvox/">Sunvox</a></li>
+</ul>
+      
+    </div>    
+  </div>
+  <div class="right">
+    <div class="dropdown">
+     <img style="width:200px;" src="https://pngfre.com/wp-content/uploads/Chicken-2-933x1024.png" alt="chicken">    
+  <div class="dropdown-content">
+  <p>Hello !!!!!!!</p>
+  </div>
+</div>
+
+
+    
+ 
+    </div>
+  <div class="foot">
+    <p>
+      Copyright &copy Bweew 2023 All Rights Reserved
+    </p>
+  </div>    
+</div>
+</body>
+</html>
