@@ -50,10 +50,28 @@
   </style>
   <style>
     @import url('https://fonts.cdnfonts.com/css/choda-chado');
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing:border-box;
+    }
     body {
       font: 1rem sans-serif;
       background-color: grey;
     }
+    
+      @media only screen and (max-width: 900px) {
+ul  {
+  top:150px;
+  }
+}
+   
+    @media only screen and (max-width: 900px) {
+  .nav-title {
+    display:none;
+  }
+}
+    
     h1 {
       font-family: choda chado;
       font-size: 7rem;
@@ -75,7 +93,7 @@ position:relative;
       list-style: none;
        position:relative;
        top:-150px;
-       right:50px;
+       right:0px;
     }
     
     li a {
@@ -144,7 +162,8 @@ background-color: #545454;
   z-index: 1;
 }
 .dropdown:hover .dropdown-content {
-  display: block;    
+  display: block; 
+    
   </style>
 <body>
   <div class="container">
@@ -154,8 +173,9 @@ background-color: #545454;
   <div class="mid">
     <section>
       <article>
-        <h2>Article 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum atque minus expedita delectus dicta? Totam modi voluptatibus, dolorum natus vitae molestias magnam possimus. Officia aspernatur dolorem deleniti eveniet eum. </p>
+        <h2>testing breakpoints</h2>
+        <p>tried phoenix editor ( brackets online editor) but it wasnt working for me bc im using an old computer that has no admin privs and cant do updates. its running opera and it needs a modern chrome to work properly. too bad brackets is a great editor and web editors are cool. githubs vs code editor in the browser is slow to load and there is no live server thats a deal breaker for me. for now im sticking with code pen. this site is just a test for media queries and that css grid generator. also wanted to practise using psudo selectors for old school column layouts with floats and clears. tried some stuff from w3 schools on making menus. first time wrapping my head around absolute postioning. hover animations. unfortunately, those dont work on mobile.
+       learned about nth child to style borders between articles excluding the outer edges.</p>
       </article>
             <article>
               <h2>Article 2</h2>
