@@ -52,9 +52,7 @@ body, html {
     min-height: 400px;
   }
 }
-   .hide {
-    display:none;
-  }
+
 </style>
 </head>
 <body>
@@ -67,19 +65,13 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
@@ -146,64 +138,7 @@ body, html {
   </div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>graphic design is my passion</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
@@ -214,12 +149,24 @@ body, html {
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">where I work</h3>
+	
+	 <p class="w3-center"><em> </em></p>
+	 
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Beasley Skatepark, 96 Mary St, Hamilton, ON L8R 1K4<br>
+	
+				
   <style>
-    .tact {
+    .tact *>{
       box-sizing:border-box;
-      height:100:vh;
+			width: 100%;
       background:#eee;
       display:flex;
       justify-content: center;
@@ -229,19 +176,20 @@ body, html {
     form {
       background:white; 
       padding:60px;
-      width:550px;
-      max-width:calc(100% - 60px);
+      width:100%%;
     }
 
     .form-element {
       display: flex; 
       flex-direction:column;
       margin-bottom:30px;
+			width: 100%;
     }
 
     .form-element span {
        margin-bottom: 10px;
       margin-top: 15px;
+			width: 100%;
     }
 
     input, text area {
@@ -249,6 +197,7 @@ body, html {
       line-height:2;
       padding:5px;
       border-radius:5px;
+			width: 100%;
     }
 
     form button {
@@ -267,10 +216,10 @@ body, html {
   <div class="tact">
   <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5BC-jaZISeLwtfTKUOI2A8TcPLchowLNSM1jLp-xCNBXlwQ/formResponse" method="post">
 
-      <h2> Contact me</h2>
+      <h2 id="contact"> Contact</h2>
   
   <div class="form-element">
-    <span>Name </span>
+    <span>Name</span>
       <input type="text" name="entry.2005620554" required placeholder="Name">
     
       <div class="form-element">
@@ -290,24 +239,12 @@ body, html {
     </div>
   </form>
         </div>
-  
-  <p class="w3-center"><em>meet me at the skatepark</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Beasley Skatepark, 96 Mary St, Hamilton, ON L8R 1K4<br>
-<div class="hide">
-          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: dontwantspam@gmail.com<br>
-</div>
-      </div>
-      
-    </div>
-  </div>
-</div>
+				
+          </div>
+					        </div>
+	 
+								</div>
+				
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -317,16 +254,9 @@ body, html {
   </div>
   <p>Powered by <a href="https://bweew.github.io/site2/" title="bweew" target="_blank" class="w3-hover-text-green">bweew</a></p>
 </footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
 
+<script>
+	
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
