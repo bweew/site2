@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>YouTube Video List</h1>
+	<img class="img" src="butterchicken.png" alt="butterchicken"> 
+    <ul>
+        {% for video in videos %}
+        <li><a href="{{ video.link }}">{{ video.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
