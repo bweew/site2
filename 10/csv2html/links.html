@@ -19,7 +19,7 @@
     </ul>
 
     <script>
-        fetch('youtube_links.csv')
+        fetch('links.csv')
             .then(response => response.text())
             .then(fileContent => {
                 const linkList = document.getElementById("linkList");
