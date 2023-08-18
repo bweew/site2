@@ -40,13 +40,28 @@ ul {
 
 }  
 </style>
-    <title>YouTube Links</title>
+    <title>shortcuts</title>
 </head>
 <body>
-    <h1>YouTube Video Links</h1>
+    <h1>Shortcuts I made</h1>
 	
 	<img class="img" src="https://i.imgur.com/1frcvKq.png" alt="butterchicken"> 
-		
+<p>these are what I use to template html pages.
+auto append creates the file cliplinks.txt.
+it grabs the clipboard and the name of page its from.
+put them into a text box with quotes around it and comma in between.
+this says its txt but its really csv format.
+each new line is a new row.
+ask append is a variation where instead of name of link you are prompted to input some text. its a bit slower but on my computer its the only one that works.
+the newer version on my computer overwrites the older ones basically breaking them and then they dont open on my phone anymore.
+if you want to clear your list run create overwrite.
+you dont really need to run delete overwrite is better because then you dont loose your file.
+HTML maker you need to take the cliplinks.txt and convert it json. then shortcuts can parse the dictionary and auto fill the links.
+</p>	
+<p>
+	my other way is an all in one solution where I have an html page with css, javascript, csv all in script tags in one file. the js parses through the csv and prints it to the dom.  
+</p>
+	
     <ul id="linkList"></ul>
 	
     <ul>
