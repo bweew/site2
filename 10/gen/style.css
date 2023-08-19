@@ -1,0 +1,49 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1c1e; /* Dark background color */
+  color: #c0c5ce;
+  font-family: "Menlo", monospace, sans-serif;
+}
+
+/* Ocean-themed styles for headers */
+h1 {
+  text-align: center;
+  margin-top: 7%;
+  color: #66aabb; /* Ocean-themed color */
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  color: #7f9f7f; /* Greyish green color */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #5a6b5e; /* Darker greyish green color */
+}
+
+a:active,
+a:focus,
+a:visited {
+  color: #8f9f8f; /* Adjusted color for active, focus, and visited links */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #1b2b34;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #d08770;
+}
