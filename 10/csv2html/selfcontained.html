@@ -48,37 +48,9 @@ ul {
 	<img class="img" src="https://i.imgur.com/1frcvKq.png" alt="butterchicken"> 
 		
     <ul id="linkList"></ul>
-	
+<li><a href="LINK">TITLE</a></li>	
     <ul>
         <li><a class="home" href="https://bweew.GitHub.io/index.html">back to home 🏠 </a></li>
     </ul>
-
-    <script>
-        const csvData = `
-		"soloing in all 12 keys ","https://m.youtube.com/watch?v=xFGhUl11H80"
-"portable keyboard setup","https://m.youtube.com/watch?v=yYyd_kh361M"
-"Clipboard Aug 18, 2023 at 2.02 AM","https://www.youtube.com/watch?v=0rIvB3LZiKA"
-        `;
-
-        const linkList = document.getElementById("linkList");
-        const lines = csvData.trim().split("\n");
-
-        lines.forEach(line => {
-            const [title, url] = line.split(",");
-
-            // Removing quotes from title and URL
-            const cleanTitle = title.trim().replace(/"/g, "");
-            const cleanUrl = url.trim().replace(/"/g, "");
-            
-            const listItem = document.createElement("li");
-            const link = document.createElement("a");
-            link.textContent = cleanTitle;
-            link.href = cleanUrl;
-            link.target = "_blank"; // Open link in a new tab
-            listItem.appendChild(link);
-            
-            linkList.appendChild(listItem);
-        });
-    </script>
 </body>
 </html>
