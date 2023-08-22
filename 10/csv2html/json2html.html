@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>YouTube Links</title>
-</head>
-<body>
-    <h1>YouTube Video Links</h1>
-    <ul id="linkList"></ul>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>YouTube Links</title>
+	</head>
+	<body>
+		<h1>YouTube Video Links</h1>
+		<ul id="linkList"></ul>
 
-    <script>
-        fetch('youtube_links.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                const linkList = document.getElementById("linkList");
-                
-                jsonData.forEach(video => {
-                    const listItem = document.createElement("li");
-                    const link = document.createElement("a");
-                    link.textContent = video.title;
-                    link.href = video.url;
-                    link.target = "_blank"; // Open link in a new tab
-                    listItem.appendChild(link);
-                    
-                    linkList.appendChild(listItem);
-                });
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
-</body>
+		<script>
+			fetch("youtube_links.json")
+				.then((response) => response.json())
+				.then((jsonData) => {
+					const linkList = document.getElementById("linkList");
+
+					jsonData.forEach((video) => {
+						const listItem = document.createElement("li");
+						const link = document.createElement("a");
+						link.textContent = video.title;
+						link.href = video.url;
+						link.target = "_blank"; // Open link in a new tab
+						listItem.appendChild(link);
+
+						linkList.appendChild(listItem);
+					});
+				})
+				.catch((error) => console.error("Error fetching JSON:", error));
+		</script>
+	</body>
 </html>

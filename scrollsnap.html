@@ -1,139 +1,139 @@
 <!DOCTYPE html>
-	<html lang=“en”>
-<head>
-<style>
+<html lang="“en”">
+	<head>
+		<style>
+			html {
+				scroll-snap-type: y mandatory;
+				scroll-padding-top: 30px;
+			}
 
-	html {
-		scroll-snap-type: y mandatory;
-		 scroll-padding-top: 30px; 
-		}
+			body {
+				background-color: grey;
+				color: white;
+				font-size: 4rem;
+				text-align: left;
+				display: grid;
+				align-items: end;
+				padding-left: 10%;
+				padding-right: 10%;
+			}
 
-	body {
-		background-color: grey;
-		color: white;
-		font-size: 4rem;
-		text-align: left;
-		display: grid;
-		align-items: end;
-		padding-left: 10%;
-		padding-right: 10%;
+			h2 {
+				color: orange;
+				text-align: center;
+			}
 
-		
-		}
+			section {
+				height: 100vh;
+				scroll-snap-align: start;
+				scroll-snap-stop: normal;
+				scroll-margin-top: 30px;
+			}
+		</style>
 
-		h2 {
-			color: orange;
-			text-align: center;
-		}
-		
+		<meta
+			name="“viewport”"
+			content="“width"
+			="device-width,"
+			initial-scale="1.0”"
+		/>
+	</head>
+	<body>
+		<div>
+			<section>
+				<h2>How to paginate a single page</h2>
+				<p>
+					using this css trick you can make it seem like you're
+					scrolling through multiple pages when its actually just a
+					single page. To get this effect heres what you do...
+				</p>
+				<ol>
+					<li>
+						style the html tag with scroll-snap-type: y mandatory.
+					</li>
+					<li>make a div with sections inside for each page.</li>
+					<li>
+						style the section with "height: 100vh;
+						scroll-snap-align:start; scroll-snap-stop:normal;"
+					</li>
+				</ol>
+			</section>
 
-	section {
-		height: 100vh;
-		scroll-snap-align: start;
-		scroll-snap-stop: normal;
-		scroll-margin-top: 30px;
-		
-		
-		}
+			<section>
+				<h2 style="“color:blue;”">scroll snap is cool</h2>
+				<p>
+					thanks to webdevsimplified for the tutorial on that effect
+					used in this layout.
+				</p>
 
+				<a href="https://youtu.be/i0yYqeDb1rw://">
+					<img
+						style="
+							max-width: 70%;
+							margin-left: auto;
+							margin-right: auto;
+							display: block;
+							width: 100%;
+						"
+						src="https://i.imgur.com/BhlojXn.jpg"
+						alt="bobby hill wabi sabi 240px"
+				/></a>
 
-</style>
+				<a style="display: block" href="index.html"
+					>go back to the homepage</a
+				>
+			</section>
 
+			<section>
+				<h2>youtube thumbnails</h2>
+				<p>
+					GH does not let you embed YT videos. a workaround, a link
+					with an image inside of it. I shrank it to 240px for a
+					faster page load. To bring it back to size gave it some css
+					styled with width:100%. its tempting to go wild with
+					pictures and photoshop but im trying to hold back to stay
+					fundamental with my scripting. as cool as it would be, soon
+					it would get slugish if I lacked restraint.
+				</p>
+			</section>
 
-	<meta name=“viewport”
-	content=“width=device-width, initial-scale=1.0” />
-</head>
-<body>
+			<section>
+				<h2>responsive css</h2>
+				<p>
+					learning more all the time its exciting that theres still
+					new properties coming out in css. never a dull moment.
+				</p>
+			</section>
 
+			<section>
+				<h2>page 5</h2>
+				<p>lorem ipsum possum awesome blah blah etc..</p>
+			</section>
 
-	<div>
+			<section>
+				<h2>page 6</h2>
+				<p>lorem ipsum possum awesome blah blah etc..</p>
+			</section>
 
-	<section>
-		<h2>How to paginate a single page</h2>
-		<p>using this css trick you can make it seem like you're scrolling through multiple pages when its actually just  a single page. To get this effect heres what you do...
-		</p>
-<ol>
-	<li>
-		style the html tag with
-		scroll-snap-type: y mandatory.	
-	</li>
-	<li>
-make a div with sections inside for each page.
-	</li>
-	<li>
-style the section with "height: 100vh; scroll-snap-align:start; scroll-snap-stop:normal;"
-	</li>
-</ol>		
+			<section>
+				<h2>page 7</h2>
+				<p>lorem ipsum possum awesome blah blah etc..</p>
+			</section>
 
-	</section>
+			<section>
+				<h2>page 8</h2>
+				<p>lorem ipsum possum awesome blah blah etc..</p>
+			</section>
 
-	<section>
-	<h2 style=“color:blue;”>scroll snap is cool</h2>
-	<p>thanks to webdevsimplified for the tutorial on that effect used in this layout.</p>
+			<section>
+				<h2>page 9</h2>
+				<p>lore ipsum possum awesome blah blah etc..</p>
+			</section>
 
-	<a href="https://youtu.be/i0yYqeDb1rw://">	<img style="max-width:70%;margin-left:auto;margin-right:auto;display:block;
-	width:100%;" src="https://i.imgur.com/BhlojXn.jpg" alt="bobby hill wabi sabi 240px" /></a>
-	
-	<a style="display:block;"
-	href="index.html">go back to the homepage</a>
-	</section>
-
-<section>
-<h2>youtube thumbnails</h2>
-<p>
-GH does not let you embed YT videos. a workaround, a link with an image inside of it. I shrank it to 240px for a faster page load. To bring it back to size gave it some css styled with width:100%. its tempting to go wild with pictures and photoshop but im trying to hold back to stay fundamental with my scripting.
-as cool as it would be, soon it would get slugish if I lacked restraint.
-</p>
-</section>
-
-<section>
-<h2>responsive css</h2>
-<p>
-learning more all the time
-its exciting that theres still new properties coming out in css. never a dull moment.
-</p>
-</section>
-
-<section>
-<h2>page 5</h2>
-<p>
-lorem ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-<section>
-<h2>page 6</h2>
-<p>
-lorem ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-<section>
-<h2>page 7</h2>
-<p>
-lorem ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-<section>
-<h2>page 8</h2>
-<p>
-lorem ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-<section>
-<h2>page 9</h2>
-<p>
-lore ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-<section>
-<h2>page 10</h2>
-<p>
-lorem ipsum possum awesome blah blah etc..
-</p>
-</section>
-
-</div>
+			<section>
+				<h2>page 10</h2>
+				<p>lorem ipsum possum awesome blah blah etc..</p>
+			</section>
+		</div>
+	</body>
+</html>

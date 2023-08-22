@@ -1,73 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Link Selection</title>
-<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to your style.css file -->
-<style>
-  /* Additional link styles for selected link */
-  .selected-link {
-    text-transform: uppercase;
-    background-color: #2a2e33; /* Darker background for selected link */
-    color: #d0d5dc;
-  }
-</style>
-</head>
-<body>
-  <div><a href='https://www.youtube.com/watch?v=wIzwyyHolRs'>From React To HTMX - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=FP-evd6ivag'>Easy Raspberry Pi Projects for 2023! - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=g4L9LNv8cZU'>We Need Lite - 8 Bit Jungle Vibes - Milkytracker - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=fNGXDoRIOSU'>MilkyTracker X chopping samples + modland clouddrive - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=3fx-Sqv5C3c'>shape the sound (protracker jungle) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=i2nMMKdKuOs'>memory crush [Milkytracker Jungle/DnB song] - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=uuoofEMoc1E'>Milkytracker  - Land's End - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=W5B1s2qGt3Y'>Cassetteopea - Descending Force [Milkytracker] HD 720p - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=gxitINSqz0A'>FastTracker 2 Jungle Style - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=bwW245q5668'>How to make Playstation Jungle from the 2000s - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=Q449fNBG1Ew&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Wonder Boy III - Monster Lair - Jungle level (Milkytracker cover) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=mrhGAz1rgzQ&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>pressure milkytracker - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=86La5ff1JUw&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>MilkyTracker X new filter! - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=gmBOLHb6HtU&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Milkytracker Bangers - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=rgfMgzYzy50&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>parmesean jazz | milkytracker | Awkward Dinosaur - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=pGzcqQhJ3e4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>MilkyTracker Chiptune "Incantation To Y Of X" - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=nDQKV2oV3uA&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>little river [milkytracker] - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=djOVyc3vQxg&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>mpxVM - Penguins ( Original Mix ) (Milkytracker FT2) (modarchive.org) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=4HpRGxznvvk&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>MilkyTracker - Computer Music, S3M-modules pt33 - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=rpW_ms-oRG4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>MilkyTracker - Computer Music, XM-modules pt4 - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=GB4dBvOgNys&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Importing Drum Sounds - Getting Started with Chiptunes & MilkyTracker (4/4) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=diWwYhnKKIA&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>My Boo Jungle Remix - jacobthebatchbandit (ProTracker 2) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=3SFwUJztqDE&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Tama Imperialstar, MilkyTracker Drummer 2 - Dragonfly Quest Drum Playthrough - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=0yG6BEsU5h4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Droned ( MilkyTracker ) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=6OHJMLFJm1A&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Santa Claus Is Coming To Town - Milky Tracker (Arr. by Tadej Supukovic) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=VsYpk3als98&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D'>Bouncy Beauties (8bit "chip tune" made in MilkyTracker) - YouTube - YouTube</a></div>
-  <div><a href='https://www.youtube.com/watch?v=Ml2u8rH9sbE'>Sum41- Pain For Pleasure (Milkytracker cover) - YouTube - YouTube</a></div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const links = document.querySelectorAll('a');
-  let selectedIndex = 0;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Link Selection</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Link to your style.css file -->
+		<style>
+			/* Additional link styles for selected link */
+			.selected-link {
+				text-transform: uppercase;
+				background-color: #2a2e33; /* Darker background for selected link */
+				color: #d0d5dc;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="https://www.youtube.com/watch?v=wIzwyyHolRs"
+				>From React To HTMX - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=FP-evd6ivag"
+				>Easy Raspberry Pi Projects for 2023! - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=g4L9LNv8cZU"
+				>We Need Lite - 8 Bit Jungle Vibes - Milkytracker - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=fNGXDoRIOSU"
+				>MilkyTracker X chopping samples + modland clouddrive - YouTube
+				- YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=3fx-Sqv5C3c"
+				>shape the sound (protracker jungle) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=i2nMMKdKuOs"
+				>memory crush [Milkytracker Jungle/DnB song] - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=uuoofEMoc1E"
+				>Milkytracker - Land's End - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=W5B1s2qGt3Y"
+				>Cassetteopea - Descending Force [Milkytracker] HD 720p -
+				YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=gxitINSqz0A"
+				>FastTracker 2 Jungle Style - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=bwW245q5668"
+				>How to make Playstation Jungle from the 2000s - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=Q449fNBG1Ew&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Wonder Boy III - Monster Lair - Jungle level (Milkytracker
+				cover) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=mrhGAz1rgzQ&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>pressure milkytracker - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=86La5ff1JUw&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>MilkyTracker X new filter! - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=gmBOLHb6HtU&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Milkytracker Bangers - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=rgfMgzYzy50&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>parmesean jazz | milkytracker | Awkward Dinosaur - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=pGzcqQhJ3e4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>MilkyTracker Chiptune "Incantation To Y Of X" - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=nDQKV2oV3uA&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>little river [milkytracker] - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=djOVyc3vQxg&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>mpxVM - Penguins ( Original Mix ) (Milkytracker FT2)
+				(modarchive.org) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=4HpRGxznvvk&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>MilkyTracker - Computer Music, S3M-modules pt33 - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=rpW_ms-oRG4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>MilkyTracker - Computer Music, XM-modules pt4 - YouTube -
+				YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=GB4dBvOgNys&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Importing Drum Sounds - Getting Started with Chiptunes &
+				MilkyTracker (4/4) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=diWwYhnKKIA&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>My Boo Jungle Remix - jacobthebatchbandit (ProTracker 2) -
+				YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=3SFwUJztqDE&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Tama Imperialstar, MilkyTracker Drummer 2 - Dragonfly Quest
+				Drum Playthrough - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=0yG6BEsU5h4&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Droned ( MilkyTracker ) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=6OHJMLFJm1A&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Santa Claus Is Coming To Town - Milky Tracker (Arr. by Tadej
+				Supukovic) - YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a
+				href="https://www.youtube.com/watch?v=VsYpk3als98&pp=ygUTbWlsa3l0cmFja2VyIGp1bmdsZQ%3D%3D"
+				>Bouncy Beauties (8bit "chip tune" made in MilkyTracker) -
+				YouTube - YouTube</a
+			>
+		</div>
+		<div>
+			<a href="https://www.youtube.com/watch?v=Ml2u8rH9sbE"
+				>Sum41- Pain For Pleasure (Milkytracker cover) - YouTube -
+				YouTube</a
+			>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const links = document.querySelectorAll("a");
+				let selectedIndex = 0;
 
-  // Apply initial selection
-  links[selectedIndex].classList.add('selected-link');
+				// Apply initial selection
+				links[selectedIndex].classList.add("selected-link");
 
-  // Handle keyboard events
-  document.addEventListener('keydown', function(event) {
-    links[selectedIndex].classList.remove('selected-link');
+				// Handle keyboard events
+				document.addEventListener("keydown", function (event) {
+					links[selectedIndex].classList.remove("selected-link");
 
-    if (event.key === 'ArrowDown') {
-      selectedIndex = Math.min(selectedIndex + 1, links.length - 1);
-    } else if (event.key === 'ArrowUp') {
-      selectedIndex = Math.max(selectedIndex - 1, 0);
-    }
+					if (event.key === "ArrowDown") {
+						selectedIndex = Math.min(
+							selectedIndex + 1,
+							links.length - 1
+						);
+					} else if (event.key === "ArrowUp") {
+						selectedIndex = Math.max(selectedIndex - 1, 0);
+					}
 
-    links[selectedIndex].classList.add('selected-link');
+					links[selectedIndex].classList.add("selected-link");
 
-    if (event.key === ' ' || event.key === 'Spacebar') {
-      event.preventDefault(); // Prevent scrolling when pressing space
-      window.open(links[selectedIndex].href, '_blank');
-    }
-  });
-});
-</script>
-</body>
+					if (event.key === " " || event.key === "Spacebar") {
+						event.preventDefault(); // Prevent scrolling when pressing space
+						window.open(links[selectedIndex].href, "_blank");
+					}
+				});
+			});
+		</script>
+	</body>
 </html>

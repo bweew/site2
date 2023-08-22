@@ -1,328 +1,371 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-	<title>phase of the moon</title>
-  <style>
-    .moon {
-      width: 200px;
-      height: 200px;
-      background-color: #f2f2f2;
-      border-radius: 50%;
-      position: relative;
-      overflow: hidden;
-    }		
-		body {
-			background-color: black;
-			font-family: sans-serif;
-			color: grey;
-		}    
-    .moon::before {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 200px;
-      background-color: #000;
-      border-radius: 50%;
-      top: 0;
-      left: -50px;
-      transform-origin: 100px 100px;
-      transform: rotate(45deg);
-    }		
-		.top-pad {
-			height:5rem ;
-		}		
-	.container {
-		display: flex;
-		flex-direction:column;
-		align-items:center;
-		justify-content:center;
-	}		
-	p {
-	margin:0 10% 0 10%;
-	}		
-a:link {
-	color: green;
-}
-a:visited {
-	color: grey;
-}
-        .container2 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-     background-color: grey;
-      color: beige;
-      font-family: sans-serif;			
-			border-radius:30px;
-			margin-left:5%;
-			margin-right:5%;
-    }   
-    h1, h2 {
-      text-align: center;
-    }   
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-    }    
-    form label {
-      margin-bottom: 10px;
-    }    
-    form input[type="date"],
-    form input[type="text"] {
-      padding: 5px;
-      margin-bottom: 10px;
-      width: 200px;
-      border: 1px solid beige;
-      border-radius: 4px;
-			background: transparent;
-    }   
-    form button {
-      padding: 10px 20px;
-      background-color: #666;
-      color: #fff;
-      border: beige 1px solid;
-      border-radius: 4px;
-      cursor: pointer;
-    }    
-    form button[type="submit"] {
-      background-color: grey;
-    }    
-    form button[type="button"],
-    form button[type="reset"] {
-      background-color: grey;
-    }    
-    #list {
-      list-style-type: disc;
-      padding: 0;
-			margin-left: 10%;
-			margin-right: 10%;
-			color: black;
-    }    
-    #list li {
-      margin-bottom: 5px;
-    }
-  </style>
-</head>
-<body>
-	
-	
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<title>phase of the moon</title>
+		<style>
+			.moon {
+				width: 200px;
+				height: 200px;
+				background-color: #f2f2f2;
+				border-radius: 50%;
+				position: relative;
+				overflow: hidden;
+			}
+			body {
+				background-color: black;
+				font-family: sans-serif;
+				color: grey;
+			}
+			.moon::before {
+				content: "";
+				position: absolute;
+				width: 100px;
+				height: 200px;
+				background-color: #000;
+				border-radius: 50%;
+				top: 0;
+				left: -50px;
+				transform-origin: 100px 100px;
+				transform: rotate(45deg);
+			}
+			.top-pad {
+				height: 5rem;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			p {
+				margin: 0 10% 0 10%;
+			}
+			a:link {
+				color: green;
+			}
+			a:visited {
+				color: grey;
+			}
+			.container2 {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background-color: grey;
+				color: beige;
+				font-family: sans-serif;
+				border-radius: 30px;
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			h1,
+			h2 {
+				text-align: center;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+			form label {
+				margin-bottom: 10px;
+			}
+			form input[type="date"],
+			form input[type="text"] {
+				padding: 5px;
+				margin-bottom: 10px;
+				width: 200px;
+				border: 1px solid beige;
+				border-radius: 4px;
+				background: transparent;
+			}
+			form button {
+				padding: 10px 20px;
+				background-color: #666;
+				color: #fff;
+				border: beige 1px solid;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			form button[type="submit"] {
+				background-color: grey;
+			}
+			form button[type="button"],
+			form button[type="reset"] {
+				background-color: grey;
+			}
+			#list {
+				list-style-type: disc;
+				padding: 0;
+				margin-left: 10%;
+				margin-right: 10%;
+				color: black;
+			}
+			#list li {
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
 		<div class="container">
-	<div class="top-pad"></div>
-		  <div class="moon"></div>
-			<h2>Moon phase </h2>
+			<div class="top-pad"></div>
+			<div class="moon"></div>
+			<h2>Moon phase</h2>
 			<blockquote>
 				"don't quote me on this, but this is the phase of the moon rn"
 			</blockquote>
 			<h6>"go ouside i don't trust this at all"</h6>
-		<p>
-using the 
-<a href="https://sunrise-sunset.org">Sunrise-Sunset API</a>
- to fetch the moon phase data by providing the latitude and longitude coordinates (in this case, for a location in Toronto). The API response is processed in JSON format, and the moon phase is extracted from the response. Then, the `updateMoonPhase` function is called to update the moon phase display based on the received data.
-		</p>
+			<p>
+				using the
+				<a href="https://sunrise-sunset.org">Sunrise-Sunset API</a>
+				to fetch the moon phase data by providing the latitude and
+				longitude coordinates (in this case, for a location in Toronto).
+				The API response is processed in JSON format, and the moon phase
+				is extracted from the response. Then, the `updateMoonPhase`
+				function is called to update the moon phase display based on the
+				received data.
+			</p>
 
-	<div class="top-pad"></div>
-	
-	<!--- yeah 🍑-->
-	
-	<style>
-
-		.music::-webkit-scrollbar {
-		  display: none;
-		}
-	</style>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(3,50px);
-grid-gap:60px;
-align-content: space-between;
-width:300px;
-overflow-x:hidden;
-"class="music">
-
-<div style="
-justify-self:center;
-align-self:center;
-height:30px;
-">
-<a href="https://youtu.be/2DtPl-0uXnk">
-	<img src="https://i.imgur.com/IT0Uxsp.jpg" alt="moondog birds lament yt thumb" />	
-</a>	
-</div>
-
-<div style="
-justify-self:center;
-align-self:center;
-height:300px;
-">
-<a href="https://youtu.be/2DtPl-0uXnk">
-	<img src="https://i.imgur.com/IT0Uxsp.jpg" alt="moondog birds lament yt thumb" />	
-</a>	
-</div>
-
-<div style="
-justify-self:center;
-align-self:center;
-height:30px;
-z-index: 1;
-">
-<a href="https://youtu.be/2DtPl-0uXnk">
-	<img src="https://i.imgur.com/IT0Uxsp.jpg" alt="moondog birds lament yt thumb" />	
-</a>	
-</div>
-			
-		
-</div>
-
-<a style="color:grey;
-font-family: baskerville;
-margin:10%"href="https://youtu.be/dNYk1fTVeVQ"> about moondog
-</a>
-
-		
-  <script>
-    function saveData() {
-      var selectedDate = document.getElementById("datepicker").value;
-      var inputValue = document.getElementById("textbox").value;
-      
-      if (localStorage.getItem(selectedDate)) {
-        // Date already exists, add the new value to the existing array
-        var existingData = JSON.parse(localStorage.getItem(selectedDate));
-        existingData.push(inputValue);
-        localStorage.setItem(selectedDate, JSON.stringify(existingData));
-      } else {
-        // Date doesn't exist, create a new array with the value
-        var newData = [inputValue];
-        localStorage.setItem(selectedDate, JSON.stringify(newData));
-      }
-      
-      // Clear the input value
-      document.getElementById("textbox").value = "";
-      
-      // Display a success message
-      alert("Data saved successfully!");
-      
-      // Refresh the list
-      displayData(selectedDate);
-    }
-    
-    function clearDate() {
-      var selectedDate = document.getElementById("datepicker").value;
-      
-      // Clear data for the selected date from local storage
-      localStorage.removeItem(selectedDate);
-      
-      // Clear the list
-      document.getElementById("list").innerHTML = "";
-    }
-    
-    function resetData() {
-      // Clear all data from local storage
-      localStorage.clear();
-      
-      // Clear the list
-      document.getElementById("list").innerHTML = "";
-      
-      // Display a success message
-      alert("Local storage cleared!");
-    }
-    
-    function displayData(selectedDate) {
-      var data = localStorage.getItem(selectedDate);
-      var list = document.getElementById("list");
-      
-      if (data) {
-        var items = JSON.parse(data);
-        
-        // Clear the list before adding new items
-        list.innerHTML = "";
-        
-        // Add items to the list
-        for (var i = 0; i < items.length; i++) {
-          var listItem = document.createElement("li");
-          listItem.textContent = items[i];
-          list.appendChild(listItem);
-        }
-      } else {
-        // Clear the list if no data exists for the selected date
-        list.innerHTML = "";
-      }
-    }
-  </script>
-	
-  <div class="container2">
-    <h1>moon journal</h1>
-		    <p>
-					write how you feel today and the phase of the moon. 
-		    </p>
-    <form>
-      <label for="datepicker">Select a Date:</label>
-      <input type="date" id="datepicker" onchange="displayData(this.value);" required>
-      
-      <label for="textbox">Enter Data:</label>
-      <input type="text" id="textbox" required>
-      
-      <button type="button" onclick="saveData();">Save Data</button>
-      <button type="button" onclick="clearDate();">Clear Date</button>
-    </form>
-    
-    <h2>Data on Selected Date:</h2>
-    <ul id="list"></ul>
-    
-<blockquote>
- see if there are any interesting correlations. 
- 	The data is stored locally in your browser.
-</blockquote>
-
-
-    <button style="margin-bottom:100px;"type="button" onclick="resetData();">clear local storage</button>
-	
-
-		
-  </div>
-	
-				<a href="index.html">back</a>	
-	
-		</div>
-		
 			<div class="top-pad"></div>
-  
-  <script>
-    // Automatically display the data for the current date on page load
-    var today = new Date().toISOString().split('T')[0];
-    displayData(today);
-  </script>
-	
 
-	
-  <script>
-    // Fetch moon phase data from the API
-    fetch('https://api.sunrise-sunset.org/json?lat=43.651070&lng=-79.347015&date=today')
-      .then(response => response.json())
-      .then(data => {
-        const moonPhase = data.moon_phase;
-        updateMoonPhase(moonPhase);
-      })
-      .catch(error => console.error(error));
+			<!--- yeah 🍑-->
 
-    // Update the moon phase based on the received data
-    function updateMoonPhase(phase) {
-      const moonElement = document.querySelector('.moon');
+			<style>
+				.music::-webkit-scrollbar {
+					display: none;
+				}
+			</style>
 
-      if (phase === 'New Moon') {
-        moonElement.style.visibility = 'hidden';
-      } else if (phase === 'First Quarter' || phase === 'Last Quarter') {
-        moonElement.style.visibility = 'visible';
-        moonElement.style.transform = 'rotate(0deg)';
-      } else {
-        moonElement.style.visibility = 'visible';
-        moonElement.style.transform = 'rotate(45deg)';
-      }
-    }
-  </script>
-</body>
+			<div
+				style="
+					display: grid;
+					grid-template-columns: repeat(3, 50px);
+					grid-gap: 60px;
+					align-content: space-between;
+					width: 300px;
+					overflow-x: hidden;
+				"
+				class="music"
+			>
+				<div
+					style="
+						justify-self: center;
+						align-self: center;
+						height: 30px;
+					"
+				>
+					<a href="https://youtu.be/2DtPl-0uXnk">
+						<img
+							src="https://i.imgur.com/IT0Uxsp.jpg"
+							alt="moondog birds lament yt thumb"
+						/>
+					</a>
+				</div>
+
+				<div
+					style="
+						justify-self: center;
+						align-self: center;
+						height: 300px;
+					"
+				>
+					<a href="https://youtu.be/2DtPl-0uXnk">
+						<img
+							src="https://i.imgur.com/IT0Uxsp.jpg"
+							alt="moondog birds lament yt thumb"
+						/>
+					</a>
+				</div>
+
+				<div
+					style="
+						justify-self: center;
+						align-self: center;
+						height: 30px;
+						z-index: 1;
+					"
+				>
+					<a href="https://youtu.be/2DtPl-0uXnk">
+						<img
+							src="https://i.imgur.com/IT0Uxsp.jpg"
+							alt="moondog birds lament yt thumb"
+						/>
+					</a>
+				</div>
+			</div>
+
+			<a
+				style="color: grey; font-family: baskerville; margin: 10%"
+				href="https://youtu.be/dNYk1fTVeVQ"
+			>
+				about moondog
+			</a>
+
+			<script>
+				function saveData() {
+					var selectedDate =
+						document.getElementById("datepicker").value;
+					var inputValue = document.getElementById("textbox").value;
+
+					if (localStorage.getItem(selectedDate)) {
+						// Date already exists, add the new value to the existing array
+						var existingData = JSON.parse(
+							localStorage.getItem(selectedDate)
+						);
+						existingData.push(inputValue);
+						localStorage.setItem(
+							selectedDate,
+							JSON.stringify(existingData)
+						);
+					} else {
+						// Date doesn't exist, create a new array with the value
+						var newData = [inputValue];
+						localStorage.setItem(
+							selectedDate,
+							JSON.stringify(newData)
+						);
+					}
+
+					// Clear the input value
+					document.getElementById("textbox").value = "";
+
+					// Display a success message
+					alert("Data saved successfully!");
+
+					// Refresh the list
+					displayData(selectedDate);
+				}
+
+				function clearDate() {
+					var selectedDate =
+						document.getElementById("datepicker").value;
+
+					// Clear data for the selected date from local storage
+					localStorage.removeItem(selectedDate);
+
+					// Clear the list
+					document.getElementById("list").innerHTML = "";
+				}
+
+				function resetData() {
+					// Clear all data from local storage
+					localStorage.clear();
+
+					// Clear the list
+					document.getElementById("list").innerHTML = "";
+
+					// Display a success message
+					alert("Local storage cleared!");
+				}
+
+				function displayData(selectedDate) {
+					var data = localStorage.getItem(selectedDate);
+					var list = document.getElementById("list");
+
+					if (data) {
+						var items = JSON.parse(data);
+
+						// Clear the list before adding new items
+						list.innerHTML = "";
+
+						// Add items to the list
+						for (var i = 0; i < items.length; i++) {
+							var listItem = document.createElement("li");
+							listItem.textContent = items[i];
+							list.appendChild(listItem);
+						}
+					} else {
+						// Clear the list if no data exists for the selected date
+						list.innerHTML = "";
+					}
+				}
+			</script>
+
+			<div class="container2">
+				<h1>moon journal</h1>
+				<p>write how you feel today and the phase of the moon.</p>
+				<form>
+					<label for="datepicker">Select a Date:</label>
+					<input
+						type="date"
+						id="datepicker"
+						onchange="displayData(this.value);"
+						required
+					/>
+
+					<label for="textbox">Enter Data:</label>
+					<input type="text" id="textbox" required />
+
+					<button type="button" onclick="saveData();">
+						Save Data
+					</button>
+					<button type="button" onclick="clearDate();">
+						Clear Date
+					</button>
+				</form>
+
+				<h2>Data on Selected Date:</h2>
+				<ul id="list"></ul>
+
+				<blockquote>
+					see if there are any interesting correlations. The data is
+					stored locally in your browser.
+				</blockquote>
+
+				<button
+					style="margin-bottom: 100px"
+					type="button"
+					onclick="resetData();"
+				>
+					clear local storage
+				</button>
+			</div>
+
+			<a href="index.html">back</a>
+		</div>
+
+		<div class="top-pad"></div>
+
+		<script>
+			// Automatically display the data for the current date on page load
+			var today = new Date().toISOString().split("T")[0];
+			displayData(today);
+		</script>
+
+		<script>
+			// Fetch moon phase data from the API
+			fetch(
+				"https://api.sunrise-sunset.org/json?lat=43.651070&lng=-79.347015&date=today"
+			)
+				.then((response) => response.json())
+				.then((data) => {
+					const moonPhase = data.moon_phase;
+					updateMoonPhase(moonPhase);
+				})
+				.catch((error) => console.error(error));
+
+			// Update the moon phase based on the received data
+			function updateMoonPhase(phase) {
+				const moonElement = document.querySelector(".moon");
+
+				if (phase === "New Moon") {
+					moonElement.style.visibility = "hidden";
+				} else if (
+					phase === "First Quarter" ||
+					phase === "Last Quarter"
+				) {
+					moonElement.style.visibility = "visible";
+					moonElement.style.transform = "rotate(0deg)";
+				} else {
+					moonElement.style.visibility = "visible";
+					moonElement.style.transform = "rotate(45deg)";
+				}
+			}
+		</script>
+	</body>
 </html>

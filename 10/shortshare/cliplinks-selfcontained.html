@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style>
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				box-sizing: border-box;
+			}
 
-body {
-  background-color: #FFC947; 
-	color: black;
-  font-family: "Menlo", monospace, sans-serif;
-}
-.img {
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-}
-.home{
-line-height:30%;
-  font-size: x-large;
-}
+			body {
+				background-color: #ffc947;
+				color: black;
+				font-family: "Menlo", monospace, sans-serif;
+			}
+			.img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+			.home {
+				line-height: 30%;
+				font-size: x-large;
+			}
 
-h1 {
-  text-align: center;
-  margin-top: 7%;
-}
+			h1 {
+				text-align: center;
+				margin-top: 7%;
+			}
 
-p {
-        margin-left:20%;
-        margin-right:20% ;
+			p {
+				margin-left: 20%;
+				margin-right: 20%;
 				margin-bottom: 20%;
-	}
+			}
 
-ul {
-  list-style-type: disclosure-closed;
-  margin: 5% 20%;
-  padding: ;
-  line-height: 170%;
+			ul {
+				list-style-type: disclosure-closed;
+				margin: 5% 20%;
+				padding: ;
+				line-height: 170%;
+			}
+		</style>
+		<title>shortcuts</title>
+	</head>
+	<body>
+		<h1>Shortcuts</h1>
 
-}  
-</style>
-    <title>shortcuts</title>
-</head>
-<body>
-    <h1>Shortcuts</h1>
-	
-	<img class="img" src="https://i.imgur.com/1frcvKq.png" alt="butterchicken"> 
-	
-    <ul id="linkList"></ul>
-	
-    <ul>
-        <li><a class="home" href="https://bweew.GitHub.io/site2/index.html">back to home 🏠 </a></li>
-    </ul>
+		<img
+			class="img"
+			src="https://i.imgur.com/1frcvKq.png"
+			alt="butterchicken"
+		/>
 
-	<p>these are what I use to template html pages.
-auto append creates the file cliplinks.txt.
-it grabs the clipboard and the name of page its from.
-put them into a text box with quotes around it and comma in between.
-this says its txt but its really csv format.
-each new line is a new row.
-ask append is a variation where instead of name of link you are prompted to input some text. its a bit slower but on my computer its the only one that works.
-the newer version on my computer overwrites the older ones basically breaking them and then they dont open on my phone anymore.
-if you want to clear your list run create overwrite.
-you dont really need to run delete overwrite is better because then you dont loose your file.
-HTML maker you need to take the cliplinks.txt and convert it json. then shortcuts can parse the dictionary and auto fill the links.
-</p>	
-<p>
-	my other way is an all in one solution where I have an html page with css, javascript, csv all in script tags in one file. the js parses through the csv and prints it to the dom.  
-</p>
-	
-    <script>
-        const csvData = `
+		<ul id="linkList"></ul>
+
+		<ul>
+			<li>
+				<a class="home" href="https://bweew.GitHub.io/site2/index.html"
+					>back to home 🏠
+				</a>
+			</li>
+		</ul>
+
+		<p>
+			these are what I use to template html pages. auto append creates the
+			file cliplinks.txt. it grabs the clipboard and the name of page its
+			from. put them into a text box with quotes around it and comma in
+			between. this says its txt but its really csv format. each new line
+			is a new row. ask append is a variation where instead of name of
+			link you are prompted to input some text. its a bit slower but on my
+			computer its the only one that works. the newer version on my
+			computer overwrites the older ones basically breaking them and then
+			they dont open on my phone anymore. if you want to clear your list
+			run create overwrite. you dont really need to run delete overwrite
+			is better because then you dont loose your file. HTML maker you need
+			to take the cliplinks.txt and convert it json. then shortcuts can
+			parse the dictionary and auto fill the links.
+		</p>
+		<p>
+			my other way is an all in one solution where I have an html page
+			with css, javascript, csv all in script tags in one file. the js
+			parses through the csv and prints it to the dom.
+		</p>
+
+		<script>
+			const csvData = `
 		"Shortcut share","https://www.icloud.com/shortcuts/822be6213a4047a8a5d0f4a109d491d5"
 "Ask append","https://www.icloud.com/shortcuts/19c3fa12da9641cfb260945f92ce1871"
 "Auto append","https://www.icloud.com/shortcuts/629e82ab798343c1842cfef25c2a248a"
@@ -85,25 +97,25 @@ HTML maker you need to take the cliplinks.txt and convert it json. then shortcut
 "HTML maker","https://www.icloud.com/shortcuts/a7c7924ed5c944c5a99e338615ef63fe"
         `;
 
-        const linkList = document.getElementById("linkList");
-        const lines = csvData.trim().split("\n");
+			const linkList = document.getElementById("linkList");
+			const lines = csvData.trim().split("\n");
 
-        lines.forEach(line => {
-            const [title, url] = line.split(",");
+			lines.forEach((line) => {
+				const [title, url] = line.split(",");
 
-            // Removing quotes from title and URL
-            const cleanTitle = title.trim().replace(/"/g, "");
-            const cleanUrl = url.trim().replace(/"/g, "");
-            
-            const listItem = document.createElement("li");
-            const link = document.createElement("a");
-            link.textContent = cleanTitle;
-            link.href = cleanUrl;
-            link.target = "_blank"; // Open link in a new tab
-            listItem.appendChild(link);
-            
-            linkList.appendChild(listItem);
-        });
-    </script>
-</body>
+				// Removing quotes from title and URL
+				const cleanTitle = title.trim().replace(/"/g, "");
+				const cleanUrl = url.trim().replace(/"/g, "");
+
+				const listItem = document.createElement("li");
+				const link = document.createElement("a");
+				link.textContent = cleanTitle;
+				link.href = cleanUrl;
+				link.target = "_blank"; // Open link in a new tab
+				listItem.appendChild(link);
+
+				linkList.appendChild(listItem);
+			});
+		</script>
+	</body>
 </html>
