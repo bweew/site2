@@ -6,30 +6,45 @@
 }
 
 body {
-  background-color: #FFC947; 
-	color: black;
-  font-family: "Menlo", monospace, sans-serif;
+    background-color: #485c4b; 
+    color: black;
+    font-family: "Menlo", monospace, sans-serif;
 }
+
 .img {
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-.home{
-line-height:30%;
-  font-size: x-large;
+
+.home {
+    line-height: 30%;
+    font-size: x-large;
 }
 
 h1 {
-  text-align: center;
-  margin-top: 7%;
+    text-align: center;
+    margin-top: 7%;
 }
 
 ul {
-  list-style-type: disclosure-closed;
-  margin: 5% 20%;
-  padding: ;
-  line-height: 170%;
+    list-style-type: disclosure-closed;
+    margin: 5% 20%;
+    line-height: 170%;
+}
 
+/* Default link color */
+a {
+    color: black;
+}
+
+/* Active links */
+a:active {
+    color: orange;
+}
+
+/* Visited links */
+a:visited {
+    color: pink;
 }
