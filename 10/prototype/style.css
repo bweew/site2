@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #FFC947; 
+	color: black;
+  font-family: "Menlo", monospace, sans-serif;
+}
+.img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+.home{
+line-height:30%;
+  font-size: x-large;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 7%;
+}
+
+ul {
+  list-style-type: disclosure-closed;
+  margin: 5% 20%;
+  padding: ;
+  line-height: 170%;
+
+}

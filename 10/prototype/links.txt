@@ -1,6 +1,1 @@
-"Shortcut share","https://www.icloud.com/shortcuts/822be6213a4047a8a5d0f4a109d491d5"
-"Ask append","https://www.icloud.com/shortcuts/19c3fa12da9641cfb260945f92ce1871"
-"Auto append","https://www.icloud.com/shortcuts/629e82ab798343c1842cfef25c2a248a"
-"Delete cliplinks","https://www.icloud.com/shortcuts/ac0015c2383d419bacbfcc8ed1f5f9da"
-"Create/overwrite","https://www.icloud.com/shortcuts/dac1781dc72a4d44a6badfdd84499e4c"
-"HTML maker","https://www.icloud.com/shortcuts/a7c7924ed5c944c5a99e338615ef63fe"
+"Vim","https://m.youtube.com/watch?v=1grU6YbVZ1Q&feature=youtu.be"

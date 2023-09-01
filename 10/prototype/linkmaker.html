@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>YouTube Links</title>
+</head>
+<body>
+    <h1>YouTube Video Links</h1>
+	
+		<img class="img" src="../csv2html/butterchicken.png" alt="butterchicken"> 
+		
+		
+    <ul id="linkList"></ul>
+	
+	<ul>
+        <li><a class="home" href="../../index.html">back to home 🏠 </a></li>
+    </ul>
+
+    <script>
+        fetch('links.txt')
+            .then(response => response.text())
+            .then(fileContent => {
+                const linkList = document.getElementById("linkList");
+                const lines = fileContent.trim().split("\n");
+
+                lines.forEach(line => {
+                    const [title, url] = line.split(",");
+                    
+                    const listItem = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.textContent = title;
+                    link.href = url;
+                    link.target = "_blank"; // Open link in a new tab
+                    listItem.appendChild(link);
+                    
+                    linkList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching CSV:', error));
+    </script>
+</body>
+</html>
