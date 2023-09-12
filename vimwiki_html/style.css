@@ -1,0 +1,116 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+h3, h2, p {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Center the entire website content */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Set the dark background color */
+body {
+  background-color: #282828;
+  color: #ebdbb2; /* Text color */
+  font-family: cozettevector, sans-serif;
+}
+
+        /* Style for the collapsed paragraphs */
+        .collapsed-paragraph {
+            display: none;
+        }
+
+        /* Style for the headings */
+        .foldable-heading {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+/* Style the header */
+header {
+  background-color: #3c3836;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the navigation menu */
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #83a598; /* Accent color */
+  font-weight: bold;
+}
+
+/* Style the main content area */
+.main-content {
+  padding: 20px;
+}
+
+/* Style headings */
+h1, h2, h3 {
+  color: #fabd2f; /* Heading color */
+  font-family: "cozettevector", sans-serif;
+}
+
+/* Style paragraphs */
+p {
+  line-height: 1.5;
+}
+
+/* Style links */
+a {
+  color: #8ec07c; /* Link color */
+}
+
+/* Style buttons */
+.button {
+  background-color: #8ec07c;
+  color: #ebdbb2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style footer */
+footer {
+  background-color: #3c3836;
+  padding: 10px 0;
+  text-align: center;
+  color: #665c54;
+}
+
+/* Add a background image */
+body {
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Additional styles specific to your content and layout can be added here */
+
