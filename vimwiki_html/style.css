@@ -18,11 +18,16 @@ body {
   min-height: 100vh;
 }
 
+@font-face {
+	font-family:myfont;
+	src:url(CozetteVector.ttf);
+}
+
 /* Set the dark background color */
 body {
   background-color: #282828;
   color: #ebdbb2; /* Text color */
-  font-family: cozettevector, sans-serif;
+  font-family:myfont, monospace;
 }
 
         /* Style for the collapsed paragraphs */
@@ -71,7 +76,7 @@ nav a {
 /* Style headings */
 h1, h2, h3 {
   color: #fabd2f; /* Heading color */
-  font-family: "cozettevector", sans-serif;
+  font-family: myfont, sans-serif;
 }
 
 /* Style paragraphs */
