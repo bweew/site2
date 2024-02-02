@@ -108,6 +108,9 @@ footer {
 	margin-right:auto;
 	align:center;
 	border-radius: 75%;
+	width: 100%;
+	height: auto;
+	
 }
 
 /* For iPhones */
