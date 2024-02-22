@@ -108,7 +108,7 @@ footer {
 	margin-right:auto;
 	align:center;
 	border-radius: 75%;
-	width: 100%;
+	max-width: 40%;
 	height: auto;
 	
 }
