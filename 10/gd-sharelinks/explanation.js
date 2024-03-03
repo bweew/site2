@@ -9,8 +9,9 @@ $(document).ready(function() {
   if (explanationDiv.length > 0) {
     // Add content to the explanation div
     explanationDiv.html(`
-      <h2>The Separation of Concerns</h2>
-      <p>Here in this file, I'm taking things further by making the code more modular. Just a couple of empty divs with some ids, links are from safari reading list.</p>
+      <h2>spreadsheet to links</h2>
+      <p>inputing the url and title for links inside google forms also using shortcuts app and webhooks with integromat to send the data. then using app script that checks if the csv exists, if it doesnt then creates it. making sure to strip any commas replacing them with tabs. Installed google drive on my mac to sync the csv with my git repo, made a shortcut that checks if the modified date is less than a minute then runs a script to overwrite the csv in my git repo with the changes before pushing them. </p>
+	  <p>Tried using folder actions to auto update the csv but I think some mac security thing isn't letting it run properly because it would only work when I manually set it off. I could've just copy pasted the links into working copy but I was really set on figuring out some kind of ci/cd hacky work around</p>
 	  <h3>jquery</h3>
       <ul>
         <li>Dynamically generating tables of links programatically using jQuery</li>
