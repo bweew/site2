@@ -1,7 +1,7 @@
 // This script will dynamically generate a table of links from a CSV file
 $(document).ready(function() {
   // Load CSV file
-  $.get('sharelinks.csv', function(csvData) {
+  $.get('data.csv', function(csvData) {
     // Parse CSV data
     var rows = csvData.split('\n');
     var tableHTML = '<table>';
