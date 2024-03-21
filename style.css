@@ -270,3 +270,12 @@ a:link{text-decoration: none;}
 .butts {
 	flex:0 24%;
 }
+
+.feed-title {
+	display: none;
+}
+.feed-item-title {
+	font-size: 1em;
+	font-family: sans-serif;
+	text-align: left;
+}
