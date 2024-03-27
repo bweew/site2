@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow rows to wrap */
+}
+
+.pad {
+  flex: 1 0 auto; /* Ensure each pad takes up equal space */
+  max-width: calc(25% - 10px); /* Set max-width to prevent overflowing */
+  height: 100px;
+  border: 2px solid #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pad:hover {
+  background-color: #555;
+}
+
+.pad.playing {
+  background-color: green; /* Darkened color for playing pad */
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Switch to column layout */
+    align-items: center;
+  }
+
+  .pad {
+    max-width: calc(50% - 10px); /* Adjusted width for small screens */
+  }
+}
+
+
+/* --------other styles -------*/
+
+h2 {
+	text-align: center;
+	color: orange;
+}
+
+header {
+  background-color: #333; /* Dark background color for the header */
+  padding: 20px; /* Add padding for spacing */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #777; /* White text color for the links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add spacing between links */
+  font-size: 18px; /* Adjust font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
