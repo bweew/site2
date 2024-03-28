@@ -82,3 +82,75 @@ pads.forEach(pad => pad.addEventListener('click', function(event) {
   const key = this.dataset.key;
   playAudio(key);
 }));
+
+// modal
+
+// Get the modal
+const modal = document.getElementById('uploadModal');
+
+// Get the <span> element that closes the modal
+const closeBtn = modal.querySelector('.close');
+
+// Get the form and add submit event listener
+const uploadForm = document.getElementById('uploadForm');
+uploadForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  submitForm();
+});
+
+// Function to show the modal
+document.getElementById('title').addEventListener('click', function() {
+  modal.style.display = 'block';
+});
+
+// Function to close the modal when close button is clicked
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+// Function to handle form submission
+function submitForm() {
+  // Get the file inputs
+  const fileInputs = Array.from(document.querySelectorAll('input[type="file"]'));
+
+  // Iterate over file inputs
+  fileInputs.forEach((input, index) => {
+    const file = input.files[0];
+    if (file) {
+      // Handle file upload, replace corresponding sample
+      handleFileUpload(file, index + 1); // Index + 1 to match sample numbers (1 to 16)
+    }
+  });
+
+  // Close the modal
+  modal.style.display = 'none';
+}
+
+// Function to handle file upload
+function handleFileUpload(file, sampleNumber) {
+  // Load the uploaded audio file
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    // Use the loaded audio data
+    const data = event.target.result;
+    // Replace the corresponding sample
+    const key = Object.keys(keySounds).find(key => keySounds[key] === `samples/${sampleNumber - 1}.wav`);
+    if (key) {
+      audioContext.decodeAudioData(data, function(buffer) {
+        soundBuffers[key] = buffer; // Replace with the new buffer
+        updatePadText(key, file.name); // Update pad text with filename
+      });
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+// Function to update pad text
+function updatePadText(key, fileName) {
+  const pad = document.querySelector(`.pad[data-key="${key}"]`);
+  if (pad) {
+    // Extract filename without extension
+    const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.');
+    pad.textContent = fileNameWithoutExtension;
+  }
+}
