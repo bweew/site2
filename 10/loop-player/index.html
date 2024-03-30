@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Pads</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 id="looperTitle">Loop Player</h1>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="fileForm">
+          <input type="file" id="fileInput" multiple>
+        </form>
+        <button id="clearAllBtn">Clear All</button>
+      </div>
+    </div>
+
+    <div class="container" id="padContainer">
+      <!-- Pads will be dynamically added here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
