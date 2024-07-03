@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video ID Extractor</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            width: 80%;
+            max-width: 400px;
+        }
+        button {
+            background-color: #1E88E5;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Video ID Extractor</h1>
+    <input type="text" id="youtubeUrl" placeholder="Enter YouTube video URL" oninput="extractVideoID()">
+    <div class="output">
+        <p id="videoID">Video ID: </p>
+        <button id="copyButton" onclick="copyToClipboard()" disabled>Copy Video ID</button>
+    </div>
+
+    <script>
+        function extractVideoID() {
+            const url = document.getElementById('youtubeUrl').value;
+            const videoID = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+
+            if (videoID && videoID[1]) {
+                document.getElementById('videoID').innerText = 'Video ID: ' + videoID[1];
+                document.getElementById('copyButton').disabled = false;
+            } else {
+                document.getElementById('videoID').innerText = 'Video ID: ';
+                document.getElementById('copyButton').disabled = true;
+            }
+        }
+
+        function copyToClipboard() {
+            const videoIDText = document.getElementById('videoID').innerText.replace('Video ID: ', '');
+            navigator.clipboard.writeText(videoIDText).then(() => {
+                alert('Video ID copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
