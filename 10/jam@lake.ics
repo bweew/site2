@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Organization//Your Product//EN
+BEGIN:VEVENT
+UID:20240705T040000Z-1234@example.com
+DTSTAMP:20240704T120000Z
+DTSTART:20240705T080000Z
+DTEND:20240705T084500Z
+SUMMARY:Jam at the Lake
+DESCRIPTION:Last night, while practicing, somebody came up and told me I was great. They gave me a toonie and asked if I had a Bandcamp and a business card, and I did!\n\nIt doesn't have to be tomorrow; I just wanted to say that this happened yesterday. It's super rare, but when it does happen, it's really encouraging to go outside and be around people.
+LOCATION:Spencer Smith Park\, 1400 Lakeshore Rd\, Burlington ON L7S 1Y2\, Canada
+END:VEVENT
+END:VCALENDAR
