@@ -129,11 +129,15 @@ END:VCARD
             lines.forEach(line => {
                 line = line.trim();
                 if (line.startsWith('BEGIN:VCARD')) {
-                    currentContact = { details: [] };
+                    currentContact = { details: [], name: '' };
                 } else if (line.startsWith('END:VCARD')) {
                     if (currentContact) {
                         contacts.push(currentContact);
                         currentContact = null;
+                    }
+                } else if (line.startsWith('FN:')) {
+                    if (currentContact) {
+                        currentContact.name = line.substring(3); // Extract name after 'FN:'
                     }
                 } else if (currentContact) {
                     currentContact.details.push(line);
@@ -151,7 +155,7 @@ END:VCARD
                 listItem.className = 'contact-item';
                 const contactLink = document.createElement('a');
                 contactLink.href = `#contact-${index}`;
-                contactLink.textContent = `Contact ${index + 1}`;
+                contactLink.textContent = contact.name || `Contact ${index + 1}`;
                 contactLink.id = `contact-${index}`;
                 listItem.appendChild(contactLink);
                 contactList.appendChild(listItem);
@@ -164,27 +168,4 @@ END:VCARD
             contacts.forEach((contact, index) => {
                 const contactDetails = document.createElement('div');
                 contactDetails.id = `contact-${index}-details`;
-                contactDetails.style.display = 'none';
-                contactDetails.innerHTML = `<h2>Contact ${index + 1}</h2><ul>${contact.details.map(detail => `<li>${detail}</li>`).join('')}</ul>`;
-                contactList.appendChild(contactDetails);
-            });
-
-            contactList.addEventListener('click', (event) => {
-                if (event.target.tagName === 'A') {
-                    const id = event.target.getAttribute('href').substring(1);
-                    const detailsDiv = document.getElementById(id + '-details');
-                    const isVisible = detailsDiv.style.display === 'block';
-                    document.querySelectorAll('.contact-item').forEach(item => item.style.display = 'none');
-                    detailsDiv.style.display = isVisible ? 'none' : 'block';
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const contacts = parseVCFContent(vcfData);
-            generateContactLinks(contacts);
-            displayContactDetails(contacts);
-        });
-    </script>
-</body>
-</html>
+                contactDetails.style.di
