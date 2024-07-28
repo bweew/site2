@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cards</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #f0f0f0;
+        }
+        .contact-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-item {
+            background-color: #2e2e2e;
+            border-radius: 5px;
+            margin: 10px auto;
+            padding: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .contact-item a:hover {
+            color: #b3b3b3;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .contact-item {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Cards</h1>
+    <ul id="contact-list" class="contact-list"></ul>
+
+    <script>
+        async function fetchVCFFile(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return await response.text();
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        function parseVCFContent(content) {
+            const contacts = [];
+            const lines = content.split('\n');
+            let currentContact = null;
+
+            lines.forEach(line => {
+                line = line.trim();
+                if (line.startsWith('BEGIN:VCARD')) {
+                    currentContact = { details: [] };
+                } else if (line.startsWith('END:VCARD')) {
+                    if (currentContact) {
+                        contacts.push(currentContact);
+                        currentContact = null;
+                    }
+                } else if (currentContact) {
+                    currentContact.details.push(line);
+                }
+            });
+
+            return contacts;
+        }
+
+        function generateContactLinks(contacts) {
+            const contactList = document.getElementById('contact-list');
+
+            contacts.forEach((contact, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'contact-item';
+                const contactLink = document.createElement('a');
+                contactLink.href = `#contact-${index}`;
+                contactLink.textContent = `Contact ${index + 1}`;
+                contactLink.id = `contact-${index}`;
+                listItem.appendChild(contactLink);
+                contactList.appendChild(listItem);
+            });
+        }
+
+        (async function() {
+            const vcfUrl = 'https://bweew.github.io/site2/10/restaurants.vcf';
+            const vcfContent = await fetchVCFFile(vcfUrl);
+            const contacts = parseVCFContent(vcfContent);
+            generateContactLinks(contacts);
+        })();
+    </script>
+</body>
+</html>
