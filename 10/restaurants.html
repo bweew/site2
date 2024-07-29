@@ -51,139 +51,16 @@
 </head>
 <body>
     <h1>Contact Cards</h1>
-    <ul id="contact-list" class="contact-list"></ul>
-
-    <script>
-        // VCF data embedded directly in the script
-        const vcfData = `
-BEGIN:VCARD
-VERSION:3.0
-FN:D Hot Shoppe
-ADR:;;4155 Fairview St;Burlington;ON;L7L 2A4;Canada
-TEL:905-631-8698
-NOTE:Jamaican
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Piper Arms Burlington
-ADR:;;4155 Fairview St Unit 1;Burlington;ON;L7L 2A4;Canada
-TEL:905-631-0002
-NOTE:Pub. Killer steak sandwitch.
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Pho Mi T&T
-ADR:;;583 Brant St;Burlington;ON;L7R 2G6;Canada
-TEL:905-631-1888
-NOTE:Vietnamese. 102 rare beef pho.
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Corn Beef Hut
-ADR:;;476 Brant St;Burlington;ON;L7R 2G4;Canada
-TEL:905-966-5955
-NOTE:Bahn Mi
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Burrito Boyz
-ADR:;;1435 Plains Rd E;Burlington;ON;L7R 3P9;Canada
-TEL:905-681-2699
-NOTE:Burrito. pulled pork or steak.
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Prince Of India
-ADR:;;1235 Fairview St;Burlington;ON;L7S 2H9;Canada
-TEL:905-333-1331
-NOTE:Indian
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Ben Tanh
-ADR:;;2080 Appleby Line;Burlington;ON;L7L 6M6;Canada
-TEL:905-336-0188
-NOTE:Asian Fusion / Dim-Sum / Bubble Tea. I like the deep fried squid tentacles Taro bt, siu mai, duck ramen, pad thai.
-END:VCARD
-
-BEGIN:VCARD
-VERSION:3.0
-FN:Hakka Fresh
-ADR:;;3500 Fairview St;Burlington;ON;L7N 2R5;Canada
-TEL:289-288-0389
-NOTE:Hakka. manchurian chicken noodles? there red and hot.
-END:VCARD
-        `;
-
-        function parseVCFContent(content) {
-            const contacts = [];
-            const lines = content.split('\n');
-            let currentContact = null;
-
-            lines.forEach(line => {
-                line = line.trim();
-                if (line.startsWith('BEGIN:VCARD')) {
-                    currentContact = { details: [], name: '', vcf: '' };
-                } else if (line.startsWith('END:VCARD')) {
-                    if (currentContact) {
-                        contacts.push(currentContact);
-                        currentContact = null;
-                    }
-                } else if (line.startsWith('FN:')) {
-                    if (currentContact) {
-                        currentContact.name = line.substring(3); // Extract name after 'FN:'
-                    }
-                } else {
-                    if (currentContact) {
-                        currentContact.vcf += line + '\n'; // Build VCF content for download
-                        currentContact.details.push(line);
-                    }
-                }
-            });
-
-            return contacts;
-        }
-
-        function generateContactLinks(contacts) {
-            const contactList = document.getElementById('contact-list');
-
-            contacts.forEach((contact, index) => {
-                const listItem = document.createElement('li');
-                listItem.className = 'contact-item';
-                const contactLink = document.createElement('a');
-                contactLink.href = '#';
-                contactLink.textContent = contact.name || `Contact ${index + 1}`; // Use FN value for the link text
-                contactLink.dataset.index = index;
-                contactLink.addEventListener('click', () => {
-                    downloadVCF(contact.vcf, contact.name || `Contact-${index + 1}`);
-                });
-                listItem.appendChild(contactLink);
-                contactList.appendChild(listItem);
-            });
-        }
-
-        function downloadVCF(vcfContent, fileName) {
-            const blob = new Blob([vcfContent], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${fileName}.vcf`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const contacts = parseVCFContent(vcfData);
-            generateContactLinks(contacts);
-        });
-    </script>
+    <ul id="contact-list" class="contact-list">
+        <li class="contact-item"><a href="/restaurants/D%20Hot%20Shoppe.vcf" download="D Hot Shoppe.vcf">D Hot Shoppe</a></li>
+        <li class="contact-item"><a href="/restaurants/Piper%20Arms%20Burlington.vcf" download="Piper Arms Burlington.vcf">Piper Arms Burlington</a></li>
+        <li class="contact-item"><a href="/restaurants/Pho%20Mi%20T&T.vcf" download="Pho Mi T&T.vcf">Pho Mi T&T</a></li>
+        <li class="contact-item"><a href="/restaurants/Corn%20Beef%20Hut.vcf" download="Corn Beef Hut.vcf">Corn Beef Hut</a></li>
+        <li class="contact-item"><a href="/restaurants/Burrito%20Boyz.vcf" download="Burrito Boyz.vcf">Burrito Boyz</a></li>
+        <li class="contact-item"><a href="/restaurants/Prince%20Of%20India.vcf" download="Prince Of India.vcf">Prince Of India</a></li>
+        <li class="contact-item"><a href="/restaurants/Ben%20Tanh.vcf" download="Ben Tanh.vcf">Ben Tanh</a></li>
+        <li class="contact-item"><a href="/restaurants/Hakka%20Fresh.vcf" download="Hakka Fresh.vcf">Hakka Fresh</a></li>
+    </ul>
 </body>
 </html>
+
