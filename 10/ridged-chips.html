@@ -101,59 +101,79 @@
         const bringChips = document.getElementById("chips").checked;
 
         // Check for pizza dough
-        if (bringPizzaDough) {
-          result +=
-            "Listen, ah, bring that triple fried pizza dough, piping hot.<br>";
-        } else {
-          result +=
-            "No pizza dough? That's fine, maybe you can bring some frozen meatballs instead.<br>";
+        switch (bringPizzaDough) {
+          case true:
+            result +=
+              "Listen, ah, bring that triple fried pizza dough, piping hot.<br>";
+            break;
+          case false:
+            result +=
+              "No pizza dough? That's fine, maybe you can bring some frozen meatballs instead.<br>";
+            break;
         }
 
         // Check for meatballs
-        if (bringMeatballs) {
-          result +=
-            "You can warm up the frozen meatballs either here or at home.<br>";
+        switch (bringMeatballs) {
+          case true:
+            result +=
+              "You can warm up the frozen meatballs either here or at home.<br>";
+            break;
         }
 
         // Check for vegetable medley
-        if (bringMedley) {
-          result +=
-            "If you're bringing a vegetable medley, bring it along with the croute de te.<br>";
-        } else {
-          result +=
-            "No vegetable medley? You could bring some lunch meat instead.<br>";
+        switch (bringMedley) {
+          case true:
+            result +=
+              "If you're bringing a vegetable medley, bring it along with the croute de te.<br>";
+            break;
+          case false:
+            result +=
+              "No vegetable medley? You could bring some lunch meat instead.<br>";
+            break;
         }
 
         // Check for black forest ham
-        if (bringHam) {
-          result +=
-            "Bring a pound and a half, or two pounds of Black Forest Ham, with a Dijon mustard spread.<br>";
+        switch (bringHam) {
+          case true:
+            result +=
+              "Bring a pound and a half, or two pounds of Black Forest Ham, with a Dijon mustard spread.<br>";
+            break;
         }
 
         // Check for dessert
-        if (bringDessert !== "None") {
-          if (bringDessert === "German Chocolate Cake") {
+        switch (bringDessert) {
+          case "German Chocolate Cake":
             result +=
               "You could bring a German chocolate cake for dessert.<br>";
-          } else if (bringDessert === "Key Lime Pie") {
+            break;
+          case "Key Lime Pie":
             result +=
               "You'll be a big hit with the dudes if you bring Key Lime Pie, a la mode, I'm talking about ice cream on the side.<br>";
-          }
+            break;
+          case "None":
+          default:
+            // No dessert action needed
+            break;
         }
 
         // Check for mozzarella sticks
-        if (bringMozzSticks) {
-          result +=
-            "Cube up those hot mozzarella sticks and put them in some marinara sauce, have them on standby.<br>";
+        switch (bringMozzSticks) {
+          case true:
+            result +=
+              "Cube up those hot mozzarella sticks and put them in some marinara sauce, have them on standby.<br>";
+            break;
         }
 
         // Check for ridged chips
-        if (bringChips) {
-          result +=
-            "Don't forget the sour cream and onion dip as long as you bring ridged chips!<br>";
-        } else {
-          result +=
-            "You must bring ridged chips for the sour cream and onion dip!<br>";
+        switch (bringChips) {
+          case true:
+            result +=
+              "Don't forget the sour cream and onion dip as long as you bring ridged chips!<br>";
+            break;
+          case false:
+            result +=
+              "You must bring ridged chips for the sour cream and onion dip!<br>";
+            break;
         }
 
         result +=
