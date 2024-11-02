@@ -2,14 +2,6 @@
 
 
 
-##[2 Bar Intro] 
-
-
-
-##   [Verse 1]
-
-
-
 ## I've been on my hustle
 
 
@@ -42,25 +34,13 @@
 
 
 
-
-##    [Chorus 1]  
-
-
-
 ## What goes around comes around, son  
-
-
-
 ##What goes around comes around (2x)  
 
 
 
-##'Cause  
-
-##    [Verse 2]  
-
-
-## I've been on my hustle  
+  
+## Cuz I've been on my hustle  
 
 
 
@@ -92,25 +72,15 @@
 
 
 
-##    [Chorus 2]  
-
-
-
 ## What goes around comes around, son  
 
 
 
 ## What goes around comes around (2x)  
 
-##    [Verse 3]  
 
 
-
-## 'Cause  
-
-
-
-## I've been on my hustle  
+## Cuz I've been on my hustle  
 
 
 
@@ -142,10 +112,6 @@
 
 
 
-##    [Chorus 3]  
-
-
-
 ## What goes around comes around, son  
 
 
@@ -154,15 +120,7 @@
 
 
 
-##    [Verse 4]
-
-
-
-## 'Cause  
-
-
-
-## I've been on my hustle  
+## Cuz I've been on my hustle  
 
 
 
@@ -194,21 +152,7 @@
 
 
 
-##  
-
-
-
-##      [Bridge]  
-
-
-
 ##  Ooooooooooooooooooooooooo  
 
 
-
-##  
-
-
-
-##  [2 bar outro]
 
