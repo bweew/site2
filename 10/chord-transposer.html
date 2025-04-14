@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chord Transposer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+    #editor, #preview {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #preview {
+      background-color: #f4f4f4;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    #controls {
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+      height: 90%;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="editor">
+    <div id="controls">
+      <button onclick="transpose(-1)">Transpose Down</button>
+      <button onclick="transpose(1)">Transpose Up</button>
+    </div>
+    <textarea id="input" placeholder="Paste your chords and lyrics here..."></textarea>
+  </div>
+
+  <div id="preview"></div>
+
+  <script>
+    const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const flatMap = { 'Db': 'C#', 'Eb': 'D#', 'Gb': 'F#', 'Ab': 'G#', 'Bb': 'A#' };
+    let transposeValue = 0;
+
+    const input = document.getElementById('input');
+    const preview = document.getElementById('preview');
+
+    input.addEventListener('input', updatePreview);
+
+    function normalizeChord(chord) {
+      return flatMap[chord] || chord;
+    }
+
+    function getTransposedChord(chord, shift) {
+      const regex = /^([A-G][b#]?)(.*)$/;
+      const match = chord.match(regex);
+      if (!match) return chord;
+
+      let [_, root, suffix] = match;
+      root = normalizeChord(root);
+      let index = notes.indexOf(root);
+      if (index === -1) return chord;
+
+      const newIndex = (index + shift + notes.length) % notes.length;
+      return notes[newIndex] + suffix;
+    }
+
+    function isChordLine(line) {
+      // Chord lines often have only chords (capitalized words with optional sharps/flats)
+      return line.trim().split(/\s+/).every(word => /^[A-G][#b]?[\w\d\/\-]*$/.test(word));
+    }
+
+    function transpose(shift) {
+      transposeValue += shift;
+      updatePreview();
+    }
+
+    function updatePreview() {
+      const lines = input.value.split('\n');
+      const transposedLines = lines.map(line => {
+        if (isChordLine(line)) {
+          return line.split(/\s+/)
+            .map(chord => getTransposedChord(chord, transposeValue))
+            .join(' ');
+        }
+        return line;
+      });
+
+      preview.textContent = transposedLines.join('\n');
+    }
+  </script>
+</body>
+</html>
+
