@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>nice curves</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		font-family: sans-serif;
+		background: #222;
+	}
+
+	section {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 400px;
+		padding: 100px 20vw;
+	}
+
+	.orange {
+		color: black;
+		background-color: orange;
+	}
+
+	.grey {
+		background-color: grey;
+	}
+
+	.pink {
+		background-color: pink;
+	}
+
+	.wave {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.wave svg {
+		position: relative;
+		display: block;
+		width: calc(175% + 1.3px);
+		height: 111px;
+	}
+
+	.wave .shape-fill-grey {
+		fill: grey;
+	}
+
+	.wave .shape-fill-orange {
+		fill: orange;
+	}
+
+	.wave .shape-fill-pink {
+		fill: pink;
+	}
+
+	.orange.bweew {
+		background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="820" height="360"><path d="M123.525 77.865c-45.659-5.411-47.29 20.84-56.25 14.25-8.95-6.6-14.36-10.15-26.73-10.23-12.37-.07-12.78 19.2-1.27 18.18 11.52-1.02 20.79-.69 22.47 11.58 1.43 121.3 1.86 131.11-1.92 142.52-3.77 11.41-19.94 1.52-26.55 7.45-6.6 5.94 8.18 23.32 8.18 23.32s21.9-2.42 33.07-2.07c11.17.35 25.93.1 37 0 86.01-9.821 64.021-90.429 55.3-101.3-8.72-10.871-7.347-11.146-1.6-21 31.891-54.678-19.917-80.495-28.727-81.345m-30.973 32.645c8.35.36 20.22 2.52 26.25 9.75 6.02 7.24 4.75 21.08-.02 28.48-4.78 7.4-13.46 13.97-22.3 14.7-8.85.72-27.74 6.41-27.93-5.93-.19-12.34 1.33-22.52-1-35s15.1-12.42 25-12m-2 70c8.56.42 9.56 18.91 20 15s19.54 1.68 23.77 10.23 2.03 20.52-3.08 27.46c-5.1 6.95-11.18 14.47-19.37 16.63-8.19 2.17-19.7 9.17-28.99 5.35-9.29-3.82 6.07-15.36 7.59-21.75 1.52-6.4 1.19-24.89-4.69-30.15-5.88-5.26-5.43-23.28 4.77-22.77zM698.927 115.989c-40.31-16.69-54.62-21.36-59.97-25.02-5.36-3.67-18.66-5.76-15.95 1.94 16.08 22.15 20.29 25.53 25.69 30.31 5.4 4.78 11.91 5.19 17.48 10.52 2.75 25.25.65 127.15.53 135.03-.12 7.88-8.78 19.22-8.78 19.22s-18.88 5.91-25.23 1.23c-6.78-21.22-18.47-85.22-25.55-86.45-7.08-1.23-17.72-5.9-22.91-.47-8.39 19.61-11.86 34.12-19.31 36.69-5.1-21.69 6.13-42.41 7-64-5.18-2.94-18.51-2.14-22.25-6.75-3.74-4.62-10.01-20.12 4.18-16.18 14.18 3.94 31.47 8.52 46.06 10.94 14.6 2.42 6.35-7.3 11.01-16.01 4.67-8.71-2.93-14.03-10.99-15.01-22.99-6.01-37.28-9.47-45-12-7.72-2.53-17.47-1.64-25.34-.32-22.65 5.35-39.933 22.098-20.422 35.105 18.496 12.331 62.355 58.056 27.082 128.555-7.848 18.037-6.23 23.61 5.59 20.59 11.83-3.01 13.6-9.62 17.77-18.23 12.39-24.61 36.11-71.52 40.53-60.91 4.78 31.22 6.41 53.97 10 63 3.6 9.02 2.39 22.63 13.78 23.22 36-1 58.66-2.5 70-3 2.24-63.86 3.43-127.98 5-192zM242.464 233.352c29.51 53 35.08 72.92 42.25 65.25 6.046-13.618 6.46-150.17 14.67-157.33 8.22-7.15 24.57 4.91 32.31-4.69 7.73-9.61-1.51-23.68-13.23-20.23-11.72 3.45-21.47-.91-30.77 6.23-9.3 7.14-12.16 11.72-14.3 22.7-3.72 82.04-3.39 93.24-2.93 105.07-14.51-22.14-12.7-33.72-18.33-36.67-5.63-2.95-13.07 5.7-16.36 9.98-8.18 25.05-10.636 31.82-14.966 22.65-4.33-9.16-3.973-8.838-6.753-19.868-2.78-11.03 5.319-1.922 8.409-12.092 3.09-10.17-11.32-5.94-13.22-11.78-1.9-5.84-1.95-17.86 4.22-21.22 6.17-3.36 19.01 4.73 20-5 .99-9.73-4.57-13.09-14-13-9.43.09-16.57.5-25.99 1.01-9.42.5-11.08 7.73-8.79 15.77 6.72 29.85 7.65 37.23 9.45 44.55 12.56 49.34 17.44 56.63 18.35 62.65.92 6.01 8.15 16.66 14.73 11.77 11.58-51.84 11.98-59.24 15.25-65.75z"/><path d="M374.184 150.879c-9.89-2.05-22.41 2.05-30.25 6.75-7.85 4.69-14.09 9.8-19.98 17.02-5.89 7.22-10.14 14.41-13.84 23.16-3.7 8.74-6.33 20.25-6.93 30.07-3.372 55.706 54.657 79.745 67.99 79.01 23.71-11.31 44.866-36.809 35.26-35.26-60.805 9.805-78.19-15.82-81.92-26.08-3.73-10.26 4.19-19.61 15.67-18.67 46.67 1.33 60.54 3.29 67.69-4.31 7.15-7.59-1.51-21.52-2.71-29.67-1.21-8.14-6.36-19.37-10.73-26.27-4.38-6.89-12.67-14.18-20.25-15.75m-13.135 24.922c19.482-2.135 35.217 30.676 23.352 31.893-49.317 2.195-56.171 3.398-53.91-7.473 2.802-13.477 11.075-22.285 30.558-24.42zM481.615 255.86c4.68 17.72-19.51 11.44-27.77 7.77-8.26-3.67-21.6-20.42-9.91-26.45 55.5-1.78 74.983 10.145 80.693-1.965 5.71-12.11-.913-33.155-4.093-44.275-3.17-11.13-11-18.32-20.84-24.16-9.85-5.83-26.97-6.34-37.38-1.22-10.42 5.11-16.88 11.83-23.95 21.05s-11.84 19.29-15.42 30.58c-3.58 11.28-4.49 27.04.35 37.99 4.83 10.95 9.98 19.13 19.62 26.38 9.64 7.24 21.16 10.68 32.7 12.3 11.54 1.62 27.9-3.33 35.25-10.75 7.35-7.43 18.67-20.69 8.82-28.32-9.84-7.64-27.74-.9-38.07 1.07m-1-71c10.49.3 16.32 3.2 20.97 14.03 4.66 10.82 2.14 22.63-11.97 19.97-14.11-2.66-19.92-.88-33.07-1.93-13.15-1.05-5.86-13.14-1.01-21.15 4.85-8.01 16.56-11.17 25.08-10.92z"/></svg>');
+
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-size: 20% auto;
+	}
+</style>
+
+<body>
+	<section class="orange">
+		<h1>How to create curved divs</h1>
+		<p><a href="https://www.shapedivider.app">the shape divider</a> is a great web tool for making these layouts. I was following <a href="https://www.youtube.com/watch?v=lPJVi797Uy0"> fireships tutorial</a>. I like this juicy emmet shortcut he uses to auto generate the sections html really quickly:</p>
+		<pre><code>
+			section*8>(h1>{Nice Curves})+p>lorem
+		</code></pre>
+
+
+		<div class="wave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-grey"></path>
+			</svg>
+		</div>
+
+	</section>
+
+	<section class="grey">
+		<h1>svg omg</h1>
+		<p><a href="https://jakearchibald.github.io/svgomg/">this tool</a> removes alot of generated junk that vector programs include in your svg. This lets you get the file size down a bit more before you embed them in your page. With it I was able to shrink my logo by 68% from 6 to 4kb.</p>
+
+		<div class="wave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-pink"></path>
+			</svg>
+
+			<div class="wave">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-grey"></path>
+				</svg>
+
+	</section>
+	<section class="pink">
+		<h1>svg to css</h1>
+		<p><a href="https://www.svgbackgrounds.com/tools/svg-to-css/">svg backgrounds.com</a> has this tool that takes the first steps further by converting it to css you can add inline. <a href="https://www.youtube.com/watch?v=kYZVXFrMC5o">matt visiwig</a>, the creator of the tool explains it here. <br />
+			you can use it with:
+		</p>
+
+		<ul>
+			<li>background images</li>
+			<li>cursor</li>
+			<li>border images</li>
+			<li>list style image for custom bullets</li>
+		</ul>
+
+		<div class="wave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill-orange"></path>
+			</svg>
+
+	</section>
+
+	<a href="https://bweew.github.io/site2" style="text-decoration: none; color: inherit;">
+		<section class="orange bweew">
+
+		</section>
+	</a>
+
+</body>
+
+</html>
